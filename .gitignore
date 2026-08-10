@@ -1,0 +1,32 @@
+# Credentials and secrets
+**/activation-keys.txt
+**/rhsm-credentials.env
+**/.env
+**/secrets/
+
+# Test results
+test-results-*.log
+*.test.log
+
+# Ansible
+*.retry
+.ansible/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Build artifacts
+*.rpm
+*.tar.gz
+*.iso
+
+# Podman/Docker
+**/.dockerignore
+
+# IDE
+.vscode/
+.idea/
+*.iml

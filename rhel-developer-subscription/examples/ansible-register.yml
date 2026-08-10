@@ -1,0 +1,139 @@
+---
+# ansible-register.yml
+# Ansible playbook to register RHEL systems with Developer subscription
+#
+# Usage:
+#   # For Individual Developer (with username/password)
+#   ansible-playbook ansible-register.yml \
+#     -e rhsm_username=myuser@example.com \
+#     -e rhsm_password=mypassword
+#
+#   # For Business Developer (with activation key)
+#   ansible-playbook ansible-register.yml \
+#     -e rhsm_org_id=1234567 \
+#     -e rhsm_activation_key=dev-team-key
+#
+# Inventory: localhost or specify with -i inventory.ini
+
+- name: Register RHEL systems with Developer subscription
+  hosts: all
+  become: true
+  vars:
+    # Subscription method: 'activationkey' or 'username'
+    rhsm_method: "{{ 'activationkey' if rhsm_activation_key is defined else 'username' }}"
+
+    # RHEL version detection
+    rhel_version: "{{ ansible_distribution_major_version }}"
+
+    # Repositories to enable (based on RHEL version)
+    rhel_repositories:
+      '8':
+        - rhel-8-for-x86_64-baseos-rpms
+        - rhel-8-for-x86_64-appstream-rpms
+      '9':
+        - rhel-9-for-x86_64-baseos-rpms
+        - rhel-9-for-x86_64-appstream-rpms
+      '10':
+        - rhel-10-for-x86_64-baseos-beta-rpms
+        - rhel-10-for-x86_64-appstream-beta-rpms
+
+  tasks:
+    - name: Verify this is a RHEL system
+      ansible.builtin.assert:
+        that:
+          - ansible_distribution == "RedHat"
+        fail_msg: "This playbook only supports RHEL systems"
+        success_msg: "Detected RHEL {{ rhel_version }}"
+
+    - name: Check current registration status
+      ansible.builtin.command: subscription-manager status
+      register: rhsm_status
+      changed_when: false
+      failed_when: false
+
+    - name: Display current status
+      ansible.builtin.debug:
+        msg: "Current subscription status: {{ rhsm_status.stdout }}"
+
+    - name: Unregister if already registered (optional)
+      ansible.builtin.command: subscription-manager unregister
+      when:
+        - rhsm_force_register | default(false)
+        - "'Overall Status: Current' in rhsm_status.stdout"
+      register: rhsm_unregister
+      changed_when: rhsm_unregister.rc == 0
+
+    - name: Register with activation key
+      community.general.redhat_subscription:
+        state: present
+        org_id: "{{ rhsm_org_id }}"
+        activationkey: "{{ rhsm_activation_key }}"
+      when: rhsm_method == 'activationkey'
+
+    - name: Register with username/password
+      community.general.redhat_subscription:
+        state: present
+        username: "{{ rhsm_username }}"
+        password: "{{ rhsm_password }}"
+        auto_attach: true
+      when: rhsm_method == 'username'
+      no_log: true
+
+    - name: Enable RHEL repositories
+      community.general.rhsm_repository:
+        name: "{{ item }}"
+        state: enabled
+      loop: "{{ rhel_repositories[rhel_version] }}"
+      when: rhel_repositories[rhel_version] is defined
+
+    - name: Refresh subscription data
+      ansible.builtin.command: subscription-manager refresh
+      changed_when: false
+
+    - name: Verify subscription status
+      ansible.builtin.command: subscription-manager status
+      register: final_status
+      changed_when: false
+
+    - name: Display final status
+      ansible.builtin.debug:
+        msg: "{{ final_status.stdout_lines }}"
+
+    - name: Verify repository access
+      ansible.builtin.command: dnf repolist
+      register: repolist
+      changed_when: false
+
+    - name: Display enabled repositories
+      ansible.builtin.debug:
+        msg: "{{ repolist.stdout_lines }}"
+
+    - name: Update all packages (optional)
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
+      when: rhsm_update_packages | default(false)
+
+    - name: Install development tools (optional)
+      ansible.builtin.dnf:
+        name: "@Development Tools"
+        state: present
+      when: rhsm_install_dev_tools | default(false)
+
+    - name: Install RHEL System Roles (optional)
+      ansible.builtin.dnf:
+        name: rhel-system-roles
+        state: present
+      when: rhsm_install_system_roles | default(false)
+
+  handlers:
+    - name: Display subscription details
+      ansible.builtin.command: subscription-manager list --consumed
+      register: consumed
+      changed_when: false
+      listen: "show subscription"
+
+    - name: Print subscription details
+      ansible.builtin.debug:
+        msg: "{{ consumed.stdout_lines }}"
+      listen: "show subscription"

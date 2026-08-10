@@ -1,0 +1,170 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                  RHEL DEVELOPER SUBSCRIPTION                              ║
+║                    EMAIL VERIFICATION GUIDE                               ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+⚠️  CRITICAL: Email verification is REQUIRED before registration can succeed!
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ QUICK CHECKLIST                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+
+Before running registration scripts, verify you've completed ALL steps:
+
+  ☐ 1. Created account at developers.redhat.com/register
+  ☐ 2. Checked email inbox (and spam folder)
+  ☐ 3. Clicked verification link in email
+  ☐ 4. Logged in to developers.redhat.com successfully
+  ☐ 5. Visited developers.redhat.com/products/rhel/download
+  ☐ 6. Waited 5-10 minutes after email verification
+
+  ✅ ALL CHECKED? → Now you can register your RHEL system!
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ THE COMPLETE FLOW                                                         │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 1: Sign Up (2 min)                                 │
+  │ → developers.redhat.com/register                        │
+  │ → Fill form, click "Create account"                     │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 2: Check Email (1-5 min)                           │
+  │ → Look for "Red Hat Developer"                          │
+  │ → Subject: "Verify your Red Hat account"                │
+  │ → Check spam if not in inbox                            │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 3: Click Verification Link (30 sec)                │
+  │ → Opens in browser                                       │
+  │ → Shows "Email verified" confirmation                    │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 4: First Login (1 min)                             │
+  │ → developers.redhat.com/login                            │
+  │ → Use your new credentials                               │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 5: Trigger Subscription (1 min)                    │
+  │ → Visit: developers.redhat.com/products/rhel/download    │
+  │ → Don't need to download anything                        │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 6: Wait (5-10 min)                                 │
+  │ → Subscription propagates to backend                     │
+  │ → Get coffee ☕                                          │
+  └──────────────────┬──────────────────────────────────────┘
+                     │
+                     ▼
+  ┌─────────────────────────────────────────────────────────┐
+  │ Step 7: Register System (2 min)                         │
+  │ → sudo subscription-manager register                     │
+  │ → sudo subscription-manager attach --auto                │
+  │ → ✅ SUCCESS!                                           │
+  └─────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ COMMON PROBLEMS & FIXES                                                   │
+└───────────────────────────────────────────────────────────────────────────┘
+
+Problem: "No subscriptions available"
+   ├─ Cause: Email not verified
+   └─ Fix: Check email, click verification link, wait 10 min, retry
+
+Problem: Can't find verification email
+   ├─ Check: Spam/junk folder
+   ├─ Check: Promotions tab (Gmail)
+   └─ Fix: Log in to developers.redhat.com → resend email
+
+Problem: Verification link expired
+   └─ Fix: Visit developers.redhat.com/login → request new link
+
+Problem: Verified but still no subscription
+   ├─ Wait: 5-10 minutes (can take up to 15 rarely)
+   ├─ Check: access.redhat.com/management/subscriptions
+   └─ Fix: sudo subscription-manager refresh; attach --auto
+
+Problem: Wrong password
+   └─ Fix: developers.redhat.com/login → "Forgot password?"
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ TIMING EXPECTATIONS                                                       │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  Account creation:        2 minutes
+  Email delivery:          1-5 minutes
+  Email verification:      30 seconds
+  First login:             1 minute
+  Subscription activation: 5-10 minutes
+  System registration:     2 minutes
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  TOTAL:                   10-20 minutes
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ AUTOMATION NOTE                                                           │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  ❌ Cannot automate email verification (human must click link)
+  
+  For automation/teams, use RHEL Developer Suite for Business:
+  • No email verification per system
+  • Use activation keys
+  • One-time setup
+  • Register instantly:
+    
+    sudo subscription-manager register \
+      --org YOUR_ORG_ID \
+      --activationkey YOUR_KEY
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ VERIFICATION CHECKLIST BEFORE RUNNING SCRIPTS                             │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  Run this command to verify you can log in:
+  
+    curl -u 'your-email@example.com' \
+      https://api.access.redhat.com/management/v1/subscriptions \
+      | jq .
+  
+  Expected: JSON list of subscriptions (not empty)
+  If empty: Email verification not complete or subscription not active
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ REGISTRATION COMMANDS (AFTER EMAIL VERIFICATION)                          │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  # Using the script (recommended)
+  cd rhel-developer-subscription/examples
+  sudo ./register-individual.sh your-email@example.com
+
+  # Manual registration
+  sudo subscription-manager register --username your-email@example.com
+  sudo subscription-manager attach --auto
+  sudo subscription-manager repos \
+    --enable rhel-9-for-x86_64-baseos-rpms \
+    --enable rhel-9-for-x86_64-appstream-rpms
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│ NEED HELP?                                                                │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  Documentation:  EMAIL-VERIFICATION.md (this repository)
+  Developer Site: https://developers.redhat.com/support
+  Support Cases:  https://access.redhat.com/support
+  Community:      https://developers.redhat.com/community
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║  Remember: Email verification is a ONE-TIME process per account.          ║
+║  After verified once, you can register multiple systems immediately.      ║
+╚═══════════════════════════════════════════════════════════════════════════╝
