@@ -20,7 +20,7 @@
 | **Who** | You personally | Corporate developers |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
-| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
 | **Paid Support** | Not available | Developer for Teams (optional) |
 | **Production** | ✅ Personal/small | ❌ Dev/test ONLY |
 | **Included** | RHEL + portfolio | RHEL only |
@@ -262,9 +262,9 @@ Both Individual and Business Developers include:
 # Knowledge Base
 https://access.redhat.com/documentation
 
-# ASK Red Hat AI
+# Ask Red Hat AI
 https://access.redhat.com
-# (Look for "ASK Red Hat" in support section)
+# (Look for "Ask Red Hat" in support section)
 
 # Community Forums
 https://community.redhat.com

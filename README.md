@@ -250,7 +250,7 @@ sudo ./verify-subscription.sh
 | **Best For** | Individual developers | Corporate developers |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
-| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
 | **Paid Support** | Not available | Red Hat Developer for Teams (optional) |
 | **Production** | ✅ Personal/small-scale | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only |

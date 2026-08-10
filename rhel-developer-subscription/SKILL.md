@@ -41,7 +41,7 @@ From a single user prompt, this skill will:
 |---------|---------|
 | **Cost** | ✅ FREE (no-cost subscription) |
 | **Systems** | Up to 16 entitlements |
-| **Support** | Self-support (knowledge base, community forums, ASK Red Hat AI) |
+| **Support** | Self-support (knowledge base, community forums, Ask Red Hat AI) |
 | **Paid Support** | Not available for Individual subscriptions |
 | **SLA** | None |
 | **Use Case** | Personal development, learning, testing, demos, small-scale production |
@@ -79,7 +79,7 @@ From a single user prompt, this skill will:
 |---------|---------|
 | **Cost** | ✅ FREE (no-cost subscription) |
 | **Systems** | Up to 25 entitlements per registered user |
-| **Support** | Self-support (knowledge base, community forums, ASK Red Hat AI) |
+| **Support** | Self-support (knowledge base, community forums, Ask Red Hat AI) |
 | **Paid Support** | Red Hat Developer for Teams support available for purchase |
 | **SLA** | None with free self-support; Yes with paid Developer for Teams support |
 | **Use Case** | Business development and testing within enterprises |
@@ -118,7 +118,7 @@ From a single user prompt, this skill will:
 | **Who** | Individual person | Corporate developers |
 | **Systems** | 16 entitlements | 25 entitlements |
 | **Email** | Any email (personal OK) | Business/corporate email required |
-| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
 | **Paid Support** | Not available | Red Hat Developer for Teams (optional purchase) |
 | **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
@@ -988,7 +988,7 @@ Both subscription types include comprehensive self-support resources at no addit
    - Share knowledge and best practices
    - https://community.redhat.com
 
-3. **ASK Red Hat AI**
+3. **Ask Red Hat AI**
    - AI-powered support assistant
    - Instant answers to common questions
    - Searches knowledge base and documentation
@@ -1033,7 +1033,7 @@ Both subscription types include comprehensive self-support resources at no addit
 | **Cost** | FREE (included) | FREE (included) | Paid (optional add-on) |
 | **Knowledge Base** | ✅ Yes | ✅ Yes | ✅ Yes |
 | **Community Forums** | ✅ Yes | ✅ Yes | ✅ Yes |
-| **ASK Red Hat AI** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Ask Red Hat AI** | ✅ Yes | ✅ Yes | ✅ Yes |
 | **Developer Resources** | ✅ Yes | ✅ Yes | ✅ Yes |
 | **Technical Support Cases** | ❌ No | ❌ No | ✅ Yes |
 | **SLA Response Times** | ❌ No | ❌ No | ✅ Yes |
@@ -1051,12 +1051,12 @@ https://access.redhat.com
 # Navigate to: Documentation → Product Documentation
 ```
 
-**ASK Red Hat AI:**
+**Ask Red Hat AI:**
 ```bash
 # Available in Red Hat Customer Portal
 https://access.redhat.com
 
-# Look for "ASK Red Hat" in the support section
+# Look for "Ask Red Hat" in the support section
 # Type your question in natural language
 # Get AI-powered answers from knowledge base
 ```
@@ -1089,7 +1089,7 @@ https://developers.redhat.com
    - Most common issues already documented
    - Search at https://access.redhat.com
 
-2. **Try ASK Red Hat AI**
+2. **Try Ask Red Hat AI**
    - Fast AI-powered answers
    - Searches knowledge base automatically
 
@@ -1146,7 +1146,7 @@ https://developers.redhat.com
 
 1. **Search before asking**
    - Check knowledge base first
-   - Use ASK Red Hat AI
+   - Use Ask Red Hat AI
    - Search community forums
 
 2. **Be specific**
