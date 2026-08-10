@@ -35,19 +35,23 @@ From a single user prompt, this skill will:
 
 ### Red Hat Developer for Individuals
 
-**Overview:** No-cost subscription for individual developers
+**Overview:** No-cost subscription for individual developers and personal use
 
 | Feature | Details |
 |---------|---------|
-| **Cost** | Free (no-cost subscription) |
-| **Systems** | Up to 16 systems |
-| **Support** | Self-supported (community forums, documentation) |
+| **Cost** | ✅ FREE (no-cost subscription) |
+| **Systems** | Up to 16 entitlements |
+| **Support** | Self-service (community forums, documentation) |
 | **SLA** | None |
-| **Use Case** | Personal development, learning, testing, demos |
-| **Intended For** | Individual developers, students, hobbyists |
-| **Commercial Use** | Personal development only (not for production) |
-| **Registration** | Individual Red Hat account with email verification |
-| **URL** | https://developers.redhat.com/register |
+| **Use Case** | Personal development, learning, testing, demos, small-scale production |
+| **Intended For** | Individual developers, students, hobbyists, personal projects |
+| **Production Use** | ✅ Allowed for personal/small-scale use |
+| **Email Required** | Any email address (personal email OK) |
+| **What's Included** | RHEL + access to other Red Hat portfolio products |
+| **Architectures** | x86_64 and ARM focused |
+| **Registration** | Red Hat Developer account with email verification |
+| **Main Page** | https://developers.redhat.com/register |
+| **Signup URL** | https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/registrations (scope: developers, ask_red_hat) |
 
 **When to use:**
 - ✅ Personal learning and skill development
@@ -58,90 +62,98 @@ From a single user prompt, this skill will:
 - ✅ Contributing to open source projects
 - ✅ Student/academic use
 - ✅ Individual freelancer development work
+- ✅ Personal/small-scale production workloads
+- ✅ Side projects and hobbies
 
 **When NOT to use:**
-- ❌ Business/company development teams
-- ❌ Production systems or workloads
-- ❌ Automated CI/CD pipelines (without manual steps)
-- ❌ Systems requiring commercial support
-- ❌ Compliance or audit requirements
-- ❌ Multiple team members sharing systems
-- ❌ Enterprise development environments
+- ❌ Company/business development work (use Business Developers instead)
+- ❌ Corporate email required scenarios
+- ❌ Need more than 16 systems
 
-### RHEL Developer Suite for Business
+### RHEL for Business Developers
 
-**Overview:** Paid subscription for business development teams
+**Overview:** No-cost subscription for business/corporate developers (launched July 2025)
 
 | Feature | Details |
 |---------|---------|
-| **Cost** | Paid (contact Red Hat Sales for pricing) |
-| **Systems** | Unlimited (team-based licensing) |
-| **Support** | Full Red Hat support with SLA |
-| **SLA** | Yes (based on subscription level) |
-| **Use Case** | Business development, CI/CD, team environments |
-| **Intended For** | Companies, development teams, enterprises |
-| **Commercial Use** | Yes (development and testing, not production) |
-| **Registration** | Organization ID + activation keys (automation-friendly) |
-| **URL** | https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite |
+| **Cost** | ✅ FREE (no-cost subscription) |
+| **Systems** | Up to 25 entitlements per registered user |
+| **Support** | Self-service (optional paid Developer Support available for purchase) |
+| **SLA** | None (unless paid support purchased) |
+| **Use Case** | Business development and testing within enterprises |
+| **Intended For** | Corporate developers, business unit developers, enterprise teams |
+| **Production Use** | ❌ Development/testing ONLY (NOT for production) |
+| **Email Required** | Business/corporate email address required |
+| **What's Included** | RHEL software only (no Satellite, no other Red Hat products) |
+| **Architectures** | All RHEL architectures (physical, virtual, cloud) |
+| **Registration** | Red Hat Developer account with business email |
+| **Main Page** | https://developers.redhat.com/products/rhel/business |
+| **Signup URL** | https://sso.redhat.com/auth/realms/redhat-external/protocol/openid-connect/auth?client_id=rhd-web&redirect_uri=https%3A//developers.redhat.com/rhelbd-confirmation/... |
 
 **When to use:**
-- ✅ Company/business development teams
-- ✅ CI/CD pipeline systems
-- ✅ Automated deployment workflows
-- ✅ Multiple developers sharing infrastructure
-- ✅ Environments requiring commercial support
-- ✅ Compliance or audit requirements
-- ✅ Integration with corporate identity systems
-- ✅ Fleet management (10+ systems)
-- ✅ Development for commercial products
-- ✅ Quality assurance/testing environments
+- ✅ Company/business development work
+- ✅ Corporate development teams
+- ✅ Business unit developers within enterprises
+- ✅ Testing applications on RHEL before production
+- ✅ Need 17-25 systems (more than Individual's 16)
+- ✅ Enterprise development environments
+- ✅ Building applications for business purposes
+- ✅ All RHEL architectures needed
+- ✅ Corporate email address available
 
 **When NOT to use:**
-- ❌ Individual personal learning (use free Individual instead)
-- ❌ Production workloads (requires separate RHEL subscriptions)
-- ❌ Hobbyist projects
-- ❌ One-off testing by individual developers
+- ❌ Personal projects (use Individual instead - same cost, allows production)
+- ❌ Production workloads (this is dev/test ONLY - use full RHEL subscriptions)
+- ❌ Need fewer than 16 systems for personal use
+- ❌ Want access to other Red Hat products beyond RHEL
+- ❌ Don't have business email address
 
 ### Key Differences Summary
 
-| Aspect | Individual | Business |
-|--------|-----------|----------|
-| **Cost** | Free | Paid |
-| **Who** | Individual person | Company/team |
-| **Systems** | 16 max | Unlimited |
-| **Support** | Community | Commercial with SLA |
-| **Automation** | Manual (email verification) | Activation keys (automated) |
-| **Use Case** | Personal dev/learning | Team dev/CI-CD |
-| **Production** | No | No (dev/test only) |
-| **Commercial** | Personal use only | Business use allowed |
+| Aspect | Individual | Business Developers |
+|--------|-----------|---------------------|
+| **Cost** | ✅ FREE | ✅ FREE |
+| **Who** | Individual person | Corporate developers |
+| **Systems** | 16 entitlements | 25 entitlements |
+| **Email** | Any email (personal OK) | Business/corporate email required |
+| **Support** | Self-service | Self-service (paid support available) |
+| **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
+| **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
+| **Architectures** | x86_64 and ARM focused | All RHEL architectures |
+| **Use Case** | Personal dev/learning/small prod | Business dev/testing only |
+| **Signup URL** | Different (personal registration) | Different (business registration) |
 
 ### Decision Flow
 
 Ask the user these questions to determine the right subscription:
 
-1. **Who will use this?**
-   - Just you personally → Individual
-   - Your company/team → Business
+1. **Is this for personal use or work/company use?**
+   - Personal projects/learning → **Individual**
+   - Company/employer work → **Business Developers**
 
-2. **How many systems?**
-   - 1-16 systems for personal use → Individual
-   - More than 16, or for a team → Business
+2. **What email will you use?**
+   - Personal email (gmail, etc.) → **Individual**
+   - Corporate/business email → **Business Developers**
 
-3. **Do you need automation?**
-   - Manual setup is fine → Individual
-   - Need CI/CD automation → Business (activation keys)
+3. **How many systems do you need?**
+   - 1-16 systems → **Individual** (unless it's for work)
+   - 17-25 systems → **Business Developers**
+   - More than 25 → Contact Red Hat Sales
 
-4. **Do you need support?**
-   - Community support is fine → Individual
-   - Need commercial support/SLA → Business
+4. **Do you need production use?**
+   - Yes, for personal/small production → **Individual** (allowed)
+   - No, dev/test only for business → **Business Developers**
+   - Yes, for business production → Neither (need full RHEL subscriptions)
 
-5. **Is this for work?**
-   - Personal projects/learning → Individual
-   - Company development work → Business
+5. **What do you need access to?**
+   - RHEL + other Red Hat products → **Individual**
+   - RHEL only (all architectures) → **Business Developers**
 
 **Simple rule of thumb:**
-- If you're an individual developer working on personal projects → **Individual**
-- If you're doing this for your employer/company → **Business**
+- **Personal projects/learning** → Individual (16 systems, production OK, any email)
+- **Company/employer work** → Business Developers (25 systems, dev/test only, business email required)
+
+**Both are FREE** - the difference is personal vs business use, not cost!
 
 ## Prerequisites
 

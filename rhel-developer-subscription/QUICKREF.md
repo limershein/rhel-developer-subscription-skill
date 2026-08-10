@@ -7,22 +7,25 @@
 **Are you doing this for personal projects or for work/your company?**
 
 - 👤 **Personal** → Individual (FREE) - https://developers.redhat.com/register
-- 🏢 **Work/Company** → Business (PAID) - Contact Red Hat Sales
+- 🏢 **Work/Company** → Business Developers (FREE) - https://developers.redhat.com/products/rhel/business
+
+**Both are FREE!** The difference is personal vs business use.
 
 ### Detailed Comparison
 
-| Feature | Individual | Business |
-|---------|-----------|----------|
-| **Cost** | ✅ FREE | Paid |
-| **Who** | You personally | Your company/team |
-| **Systems** | Up to 16 | Unlimited |
-| **Support** | Community forums | Commercial + SLA |
-| **Automation** | Manual (email verification) | Activation keys |
-| **Use Case** | Personal dev, learning, home lab | Team dev, CI/CD, fleet |
-| **Sign Up** | developers.redhat.com/register | Red Hat Sales |
-| **Registration** | Username/password | Activation key (recommended) |
+| Feature | Individual | Business Developers |
+|---------|-----------|---------------------|
+| **Cost** | ✅ FREE | ✅ FREE |
+| **Launch** | Long-standing | July 2025 |
+| **Who** | You personally | Corporate developers |
+| **Systems** | Up to 16 | Up to 25 per user |
+| **Email** | Any (personal OK) | Business email required |
+| **Support** | Self-service | Self-service (paid available) |
+| **Production** | ✅ Personal/small | ❌ Dev/test ONLY |
+| **Included** | RHEL + portfolio | RHEL only |
+| **Sign Up** | developers.redhat.com/register | developers.redhat.com/products/rhel/business |
 
-**When in doubt:** If you're an individual working on personal projects → Individual. If your employer is paying or it's for work → Business.
+**When in doubt:** Personal projects with any email → Individual. Company work with business email → Business Developers.
 
 ## One-Liners
 

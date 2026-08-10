@@ -37,46 +37,56 @@ The subscription will NOT work until email verification is complete!
 
 **Quick Decision:**
 - 👤 **Personal use** (learning, home lab, personal projects) → **Individual (FREE)**
-- 🏢 **Company/work** (team dev, CI/CD, business projects) → **Business (PAID)**
+- 🏢 **Company/work** (team dev, testing, business projects) → **Business Developers (FREE)**
+
+**Both subscriptions are FREE** - the difference is personal vs business use!
 
 ### Detailed Comparison
 
-| Feature | Individual | Business |
-|---------|-----------|----------|
-| **Cost** | ✅ FREE | 💰 Paid (contact sales) |
-| **Who For** | Individual developers | Companies, teams |
-| **Systems** | Up to 16 | Unlimited |
-| **Support** | Community (self-help) | Commercial with SLA |
-| **Use Case** | Personal dev, learning | Team dev, CI/CD |
-| **Automation** | Manual (email verification required) | Activation keys (fully automated) |
-| **Production Use** | ❌ No | ❌ No (dev/test only) |
-| **Commercial Projects** | Personal only | ✅ Business use allowed |
+| Feature | Individual | Business Developers |
+|---------|-----------|---------------------|
+| **Cost** | ✅ FREE | ✅ FREE |
+| **Launch** | Long-standing | July 2025 |
+| **Who For** | Individual developers | Corporate developers |
+| **Systems** | Up to 16 | Up to 25 per user |
+| **Email** | Any email (personal OK) | Business email required |
+| **Support** | Self-service | Self-service (paid option available) |
+| **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
+| **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
+| **Architectures** | x86_64 and ARM focused | All RHEL architectures |
+| **Use Case** | Personal dev, learning, small prod | Business dev/testing |
 
 ### Red Hat Developer for Individuals (FREE)
 
 Perfect for:
 - ✅ Personal learning and skill development
-- ✅ Home lab environments
+- ✅ Home lab environments  
 - ✅ Individual developer workstations
+- ✅ Personal/small-scale production workloads
 - ✅ Testing and demos
 - ✅ Open source contributions
 - ✅ Student/academic use
+- ✅ Freelancer development work
 
-**Sign up:** https://developers.redhat.com/register
+**Sign up:** https://developers.redhat.com/register  
+**Email:** Any email address (personal OK)
 
-### RHEL Developer Suite for Business (PAID)
+### RHEL for Business Developers (FREE - launched July 2025)
 
 Perfect for:
-- ✅ Company development teams
-- ✅ CI/CD pipelines
-- ✅ Automated deployments
-- ✅ Fleet management (10+ systems)
-- ✅ Environments requiring commercial support
-- ✅ Development for commercial products
+- ✅ Company/corporate development work
+- ✅ Business development teams
+- ✅ Testing applications before production deployment
+- ✅ Enterprise development environments
+- ✅ Building apps for business purposes
+- ✅ Need 17-25 systems (more than Individual's 16)
+- ✅ All RHEL architectures required
 
-**Purchase:** https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite
+**Sign up:** https://developers.redhat.com/products/rhel/business  
+**Email:** Business/corporate email required  
+**Note:** Dev/test ONLY - not for production workloads
 
-**Note:** Both subscriptions are for development/testing only, NOT for production workloads. Production requires separate RHEL subscriptions.
+**Important:** Individual allows production use for personal projects. Business Developers is dev/test only but gives you 25 systems and all RHEL architectures.
 
 ## Requirements
 
