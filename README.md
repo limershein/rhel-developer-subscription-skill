@@ -232,15 +232,49 @@ sudo ./verify-subscription.sh
 
 ## Subscription Types Comparison
 
-| | Individual | Business |
-|---|------------|----------|
-| **Cost** | Free | Paid (contact sales) |
-| **Systems** | 16 | Unlimited (team-based) |
-| **Support** | Self/community | Full Red Hat Support |
-| **SLA** | None | Yes |
-| **Use Case** | Learning, personal dev | Production development |
-| **Registration** | Username/password | Activation key recommended |
+### Which Subscription Do You Need?
+
+**Simple question:** Is this for **personal use** or for **your company/employer**?
+
+- 👤 **Personal** (learning, home lab, side projects) → **Individual** (FREE)
+- 🏢 **Work** (company dev, team projects, CI/CD) → **Business** (PAID)
+
+### Detailed Comparison
+
+| Feature | Individual (FREE) | Business (PAID) |
+|---------|-------------------|-----------------|
+| **Cost** | ✅ No cost | Contact Red Hat Sales |
+| **Best For** | Individual developers | Companies & teams |
+| **Systems** | Up to 16 | Unlimited |
+| **Support** | Community (forums, docs) | Commercial with SLA |
+| **Automation** | Manual (requires email verification) | Activation keys (fully automated) |
+| **Use Case** | Personal learning, home lab, demos | Team dev, CI/CD, fleet management |
+| **Production** | ❌ Dev/test only | ❌ Dev/test only |
+| **Commercial Projects** | Personal use only | ✅ Business use allowed |
+| **Registration** | Username + password (manual) | Activation keys (automated) |
 | **Sign Up** | https://developers.redhat.com/register | https://www.redhat.com/en/store |
+
+### When to Use Individual (FREE)
+
+✅ You're learning RHEL  
+✅ Personal development workstation  
+✅ Home lab environment  
+✅ Testing and experimentation  
+✅ Student/academic projects  
+✅ Open source contributions  
+✅ Individual freelancer development  
+
+### When to Use Business (PAID)
+
+✅ Company development team  
+✅ CI/CD pipeline systems  
+✅ Automated deployments  
+✅ More than 16 systems  
+✅ Need commercial support  
+✅ Team collaboration  
+✅ Developing commercial products  
+
+**Important:** Both subscriptions are for **development and testing only**. Production workloads require separate RHEL subscriptions.
 
 ## Security Best Practices
 

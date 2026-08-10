@@ -34,18 +34,114 @@ From a single user prompt, this skill will:
 ## Subscription Types
 
 ### Red Hat Developer for Individuals
-- **Cost:** Free (no-cost subscription)
-- **Use case:** Personal learning, development, demos
-- **Entitlement:** 16 systems
-- **Support:** Self-supported (community)
-- **URL:** https://developers.redhat.com/register
+
+**Overview:** No-cost subscription for individual developers
+
+| Feature | Details |
+|---------|---------|
+| **Cost** | Free (no-cost subscription) |
+| **Systems** | Up to 16 systems |
+| **Support** | Self-supported (community forums, documentation) |
+| **SLA** | None |
+| **Use Case** | Personal development, learning, testing, demos |
+| **Intended For** | Individual developers, students, hobbyists |
+| **Commercial Use** | Personal development only (not for production) |
+| **Registration** | Individual Red Hat account with email verification |
+| **URL** | https://developers.redhat.com/register |
+
+**When to use:**
+- ✅ Personal learning and skill development
+- ✅ Individual developer workstation
+- ✅ Home lab environments
+- ✅ Testing and experimentation
+- ✅ Demo systems for presentations
+- ✅ Contributing to open source projects
+- ✅ Student/academic use
+- ✅ Individual freelancer development work
+
+**When NOT to use:**
+- ❌ Business/company development teams
+- ❌ Production systems or workloads
+- ❌ Automated CI/CD pipelines (without manual steps)
+- ❌ Systems requiring commercial support
+- ❌ Compliance or audit requirements
+- ❌ Multiple team members sharing systems
+- ❌ Enterprise development environments
 
 ### RHEL Developer Suite for Business
-- **Cost:** Paid subscription
-- **Use case:** Business development teams
-- **Entitlement:** Team-based licensing
-- **Support:** Full Red Hat support
-- **URL:** https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite
+
+**Overview:** Paid subscription for business development teams
+
+| Feature | Details |
+|---------|---------|
+| **Cost** | Paid (contact Red Hat Sales for pricing) |
+| **Systems** | Unlimited (team-based licensing) |
+| **Support** | Full Red Hat support with SLA |
+| **SLA** | Yes (based on subscription level) |
+| **Use Case** | Business development, CI/CD, team environments |
+| **Intended For** | Companies, development teams, enterprises |
+| **Commercial Use** | Yes (development and testing, not production) |
+| **Registration** | Organization ID + activation keys (automation-friendly) |
+| **URL** | https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite |
+
+**When to use:**
+- ✅ Company/business development teams
+- ✅ CI/CD pipeline systems
+- ✅ Automated deployment workflows
+- ✅ Multiple developers sharing infrastructure
+- ✅ Environments requiring commercial support
+- ✅ Compliance or audit requirements
+- ✅ Integration with corporate identity systems
+- ✅ Fleet management (10+ systems)
+- ✅ Development for commercial products
+- ✅ Quality assurance/testing environments
+
+**When NOT to use:**
+- ❌ Individual personal learning (use free Individual instead)
+- ❌ Production workloads (requires separate RHEL subscriptions)
+- ❌ Hobbyist projects
+- ❌ One-off testing by individual developers
+
+### Key Differences Summary
+
+| Aspect | Individual | Business |
+|--------|-----------|----------|
+| **Cost** | Free | Paid |
+| **Who** | Individual person | Company/team |
+| **Systems** | 16 max | Unlimited |
+| **Support** | Community | Commercial with SLA |
+| **Automation** | Manual (email verification) | Activation keys (automated) |
+| **Use Case** | Personal dev/learning | Team dev/CI-CD |
+| **Production** | No | No (dev/test only) |
+| **Commercial** | Personal use only | Business use allowed |
+
+### Decision Flow
+
+Ask the user these questions to determine the right subscription:
+
+1. **Who will use this?**
+   - Just you personally → Individual
+   - Your company/team → Business
+
+2. **How many systems?**
+   - 1-16 systems for personal use → Individual
+   - More than 16, or for a team → Business
+
+3. **Do you need automation?**
+   - Manual setup is fine → Individual
+   - Need CI/CD automation → Business (activation keys)
+
+4. **Do you need support?**
+   - Community support is fine → Individual
+   - Need commercial support/SLA → Business
+
+5. **Is this for work?**
+   - Personal projects/learning → Individual
+   - Company development work → Business
+
+**Simple rule of thumb:**
+- If you're an individual developer working on personal projects → **Individual**
+- If you're doing this for your employer/company → **Business**
 
 ## Prerequisites
 
@@ -68,22 +164,66 @@ User invokes with natural language:
 
 ### Step 1: Determine Subscription Type
 
-Ask clarifying question if not specified:
+If the user's prompt doesn't clearly indicate individual vs business use, ask clarifying questions:
 
 **Prompt:**
 ```
-Which subscription do you need?
+To help you get the right RHEL Developer subscription, I need to ask:
 
-1. **Red Hat Developer for Individuals** (Free)
-   - For personal development, learning, demos
-   - 16 systems, self-supported
+❓ Is this for personal use or for your company/employer?
+
+1. **Personal** - Individual learning, home lab, personal projects
+   → Red Hat Developer for Individuals (FREE)
    
-2. **RHEL Developer Suite for Business** (Paid)
-   - For business development teams
-   - Team licensing with full support
+2. **Company/Work** - Business development, team projects, work systems
+   → RHEL Developer Suite for Business (PAID)
 
-Enter 1 or 2, or describe your use case:
+Or tell me about your use case and I'll recommend the right one.
 ```
+
+**Additional clarifying questions if needed:**
+
+```
+Let me help determine which subscription fits your needs:
+
+• Are you setting this up for yourself or for a team?
+• Will this be used for personal projects or company work?
+• Do you need more than 16 systems?
+• Do you need commercial support with SLA?
+• Is this for CI/CD automation?
+
+Based on your answers:
+- Personal use, ≤16 systems, no support needed → Individual (FREE)
+- Company use, team/automation, or need support → Business (PAID)
+```
+
+**Automated detection from user prompt:**
+
+Look for these keywords in the user's request:
+
+**Indicators for Individual:**
+- "my personal", "learning", "studying", "home lab"
+- "trying out", "experimenting", "testing"
+- "for myself", "personal project"
+- "hobby", "side project"
+
+**Indicators for Business:**
+- "our company", "our team", "work", "employer"
+- "CI/CD", "pipeline", "automation", "fleet"
+- "production", "commercial", "enterprise"
+- "multiple developers", "team members"
+- "need support", "SLA required"
+
+**Example responses:**
+
+User: "I'm learning RHEL for personal development"
+→ Agent: "You need Red Hat Developer for Individuals (free)"
+
+User: "Our dev team needs to set up RHEL for our CI/CD pipeline"
+→ Agent: "You need RHEL Developer Suite for Business (paid, with activation keys)"
+
+User: "I want to register this system"
+→ Agent: "Is this for personal use or company/team use?" (ask clarifying question)
 
 ### Step 2: Verify System
 

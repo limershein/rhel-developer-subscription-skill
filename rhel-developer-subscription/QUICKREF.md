@@ -2,14 +2,27 @@
 
 ## Subscription Types
 
-| Feature | Developer for Individuals | Developer Suite for Business |
-|---------|---------------------------|------------------------------|
-| **Cost** | Free | Paid |
-| **Systems** | 16 | Team-based |
-| **Support** | Community | Full Red Hat Support |
-| **Use Case** | Personal dev, learning | Business teams |
-| **Sign Up** | developers.redhat.com | Red Hat Sales |
-| **Registration** | Username/password | Activation key recommended |
+### Quick Decision Guide
+
+**Are you doing this for personal projects or for work/your company?**
+
+- 👤 **Personal** → Individual (FREE) - https://developers.redhat.com/register
+- 🏢 **Work/Company** → Business (PAID) - Contact Red Hat Sales
+
+### Detailed Comparison
+
+| Feature | Individual | Business |
+|---------|-----------|----------|
+| **Cost** | ✅ FREE | Paid |
+| **Who** | You personally | Your company/team |
+| **Systems** | Up to 16 | Unlimited |
+| **Support** | Community forums | Commercial + SLA |
+| **Automation** | Manual (email verification) | Activation keys |
+| **Use Case** | Personal dev, learning, home lab | Team dev, CI/CD, fleet |
+| **Sign Up** | developers.redhat.com/register | Red Hat Sales |
+| **Registration** | Username/password | Activation key (recommended) |
+
+**When in doubt:** If you're an individual working on personal projects → Individual. If your employer is paying or it's for work → Business.
 
 ## One-Liners
 

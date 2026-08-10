@@ -33,17 +33,50 @@ The subscription will NOT work until email verification is complete!
 
 ## Subscription Types
 
-### Red Hat Developer for Individuals
-- **Free** no-cost subscription
-- 16 systems
-- Personal development, learning, demos
-- Register at: https://developers.redhat.com/register
+### Which Subscription Do You Need?
 
-### RHEL Developer Suite for Business
-- **Paid** subscription
-- Team licensing with full support
-- Business development teams
-- Purchase at: https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite
+**Quick Decision:**
+- 👤 **Personal use** (learning, home lab, personal projects) → **Individual (FREE)**
+- 🏢 **Company/work** (team dev, CI/CD, business projects) → **Business (PAID)**
+
+### Detailed Comparison
+
+| Feature | Individual | Business |
+|---------|-----------|----------|
+| **Cost** | ✅ FREE | 💰 Paid (contact sales) |
+| **Who For** | Individual developers | Companies, teams |
+| **Systems** | Up to 16 | Unlimited |
+| **Support** | Community (self-help) | Commercial with SLA |
+| **Use Case** | Personal dev, learning | Team dev, CI/CD |
+| **Automation** | Manual (email verification required) | Activation keys (fully automated) |
+| **Production Use** | ❌ No | ❌ No (dev/test only) |
+| **Commercial Projects** | Personal only | ✅ Business use allowed |
+
+### Red Hat Developer for Individuals (FREE)
+
+Perfect for:
+- ✅ Personal learning and skill development
+- ✅ Home lab environments
+- ✅ Individual developer workstations
+- ✅ Testing and demos
+- ✅ Open source contributions
+- ✅ Student/academic use
+
+**Sign up:** https://developers.redhat.com/register
+
+### RHEL Developer Suite for Business (PAID)
+
+Perfect for:
+- ✅ Company development teams
+- ✅ CI/CD pipelines
+- ✅ Automated deployments
+- ✅ Fleet management (10+ systems)
+- ✅ Environments requiring commercial support
+- ✅ Development for commercial products
+
+**Purchase:** https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite
+
+**Note:** Both subscriptions are for development/testing only, NOT for production workloads. Production requires separate RHEL subscriptions.
 
 ## Requirements
 
