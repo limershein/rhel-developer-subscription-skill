@@ -20,16 +20,18 @@ version: 1.0.0
 
 ## Purpose
 
-Automate the end-to-end flow for obtaining and activating Red Hat Enterprise Linux developer subscriptions:
-- **Red Hat Developer for Individuals** (no-cost, for personal development)
-- **RHEL Developer Suite for Business** (team subscriptions with support)
+Get developers from "I need RHEL" to "dnf install works" without making them hunt through documentation.
 
-From a single user prompt, this skill will:
-1. Determine subscription type based on use case
-2. Guide account creation or login
-3. Activate the subscription
-4. Register the RHEL system
-5. Verify repository access
+Handles two subscription types:
+- **Red Hat Developer for Individuals** (free, for personal dev)
+- **RHEL for Business Developers** (free, for work)
+
+From one prompt, this skill:
+1. Figures out which subscription they need
+2. Walks them through account setup (including the email verification wait)
+3. Registers their system
+4. Enables the repos
+5. Confirms it all works
 
 ## Subscription Types
 
@@ -281,14 +283,14 @@ After completing registration and email verification, you'll have:
 - Red Hat account credentials (username/password)
 - Automatic entitlement to Developer for Individuals (16 systems)
 
-⚠️  **Email Verification Required:**
-The subscription will NOT be active until you:
-1. Verify your email address by clicking the link sent to you
-2. Complete your first login to developers.redhat.com
+⚠️  **Email verification required - no way around it:**
+Your subscription won't work until you:
+1. Click the verification link in your email
+2. Log in to developers.redhat.com at least once
 
-This process typically takes 2-5 minutes.
+This takes 2-5 minutes. Grab coffee while you wait.
 
-Have you completed email verification and logged in? (y/n)
+Have you verified your email and logged in? (y/n)
 ```
 
 #### 3A.2: System Registration

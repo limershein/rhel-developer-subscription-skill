@@ -1,56 +1,53 @@
 # RHEL Developer Subscription Skill
 
-> **AI-driven automation for Red Hat Enterprise Linux developer subscriptions**
+**Get your RHEL development environment set up without the subscription hassle.**
 
-This repository contains a complete [Agent Skills](https://agentskills.io)-compliant skill that enables AI assistants to automate the full workflow of obtaining and activating Red Hat developer subscriptions on RHEL systems.
+This skill teaches AI assistants how to walk you through Red Hat developer subscription registration - from account creation to `dnf install`. Works for both personal dev machines and company development teams.
 
-## Overview
+## What it does
 
-The `rhel-developer-subscription` skill provides end-to-end automation for:
+Automates everything between "I need RHEL" and "dnf install works":
 
-- **Red Hat Developer for Individuals** (no-cost, 16 systems, community support)
-- **RHEL Developer Suite for Business** (paid, team licensing, full support)
+- **Red Hat Developer for Individuals** (free, 16 systems, for personal use)
+- **RHEL for Business Developers** (free, 25 systems, for work)
 
-From a single natural language prompt, an AI agent can:
-1. Detect RHEL version and subscription status
-2. Determine appropriate subscription type
-3. Guide account creation or login
-4. Register the system with subscription-manager
-5. Enable correct repositories
-6. Verify access and functionality
+One prompt. Five minutes. Your AI assistant handles:
+1. Checking your RHEL version
+2. Figuring out which subscription you need
+3. Walking you through account setup
+4. Running `subscription-manager register`
+5. Enabling the right repos
+6. Confirming everything works
 
-## Quick Start
+## Quick start
 
-### For End Users
+### Talk to your AI assistant
 
-**Natural language prompts:**
 ```
 "I need a developer subscription for RHEL"
 "Register this system with Red Hat Developer"
 "Set up RHEL for business development"
 ```
 
-The AI agent will load this skill and guide you through the complete process.
+That's it. The AI loads this skill and walks you through the rest.
 
-### For System Administrators
+### Skip the AI, run the scripts
 
-**Direct script usage:**
 ```bash
 cd rhel-developer-subscription/examples
 
-# Individual Developer subscription
+# Personal dev machine
 sudo ./register-individual.sh user@example.com
 
-# Business Developer subscription (with activation key)
+# Work machine (with activation key)
 sudo ./register-business.sh --org 1234567 --key my-activation-key
 
-# Verify subscription
+# Check it worked
 sudo ./verify-subscription.sh
 ```
 
-### For Fleet Management
+### Register a whole dev team
 
-**Ansible automation:**
 ```bash
 cd rhel-developer-subscription/examples
 

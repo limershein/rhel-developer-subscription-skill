@@ -1,45 +1,44 @@
 # RHEL Developer Subscription Skill
 
-Automates the process of obtaining and activating Red Hat Enterprise Linux developer subscriptions through AI assistants.
+Get your RHEL system registered and ready to code. Fast.
 
 ## Quick Start
 
-**User prompts:**
+Just ask:
 ```
 "I need a developer subscription for RHEL"
 "Register this system with Red Hat Developer"
 "Set up RHEL for business development"
 ```
 
-**Agent loads this skill and:**
-1. Determines subscription type (Individual vs Business)
-2. Guides through account creation or login
-3. **Ensures email verification is complete** ⚠️
-4. Registers the RHEL system
-5. Enables repositories
-6. Verifies access
+What happens next:
+1. Figures out which subscription you need (Individual or Business)
+2. Walks you through account setup
+3. Handles email verification (it's required, takes ~10 minutes)
+4. Registers your system
+5. Enables the repos you need
+6. Confirms everything works
 
-### ⚠️ Important: Email Verification Required
+### ⚠️ Heads up: Email verification required
 
-For **Individual Developer** subscriptions, you MUST:
+For Individual Developer subscriptions:
 1. Sign up at https://developers.redhat.com/register
-2. **Check your email** for a verification link
-3. **Click the link** to verify your email address
-4. **Log in** to https://developers.redhat.com
-5. **Wait 5-10 minutes** for subscription to activate
-6. Then proceed with system registration
+2. Check your email for the verification link
+3. Click it
+4. Log in to https://developers.redhat.com
+5. Wait 5-10 minutes for your subscription to activate
+6. Then come back and register your system
 
-The subscription will NOT work until email verification is complete!
+Your subscription won't work until you verify your email. It's quick, but you can't skip it.
 
-## Subscription Types
+## Which subscription do you need?
 
-### Which Subscription Do You Need?
+**Simple question:** Personal or work?
 
-**Quick Decision:**
-- 👤 **Personal use** (learning, home lab, personal projects) → **Individual (FREE)**
-- 🏢 **Company/work** (team dev, testing, business projects) → **Business Developers (FREE)**
+- 👤 **Personal** (learning, home lab, side projects) → Individual (free)
+- 🏢 **Work** (company dev, testing) → Business Developers (free)
 
-**Both subscriptions are FREE** - the difference is personal vs business use!
+Both are free. Choose based on who you're working for, not features.
 
 ### Detailed Comparison
 
@@ -57,37 +56,33 @@ The subscription will NOT work until email verification is complete!
 | **Architectures** | x86_64 and ARM focused | All RHEL architectures |
 | **Use Case** | Personal dev, learning, small prod | Business dev/testing |
 
-### Red Hat Developer for Individuals (FREE)
+### Red Hat Developer for Individuals (free)
 
-Perfect for:
-- ✅ Personal learning and skill development
-- ✅ Home lab environments  
-- ✅ Individual developer workstations
-- ✅ Personal/small-scale production workloads
-- ✅ Testing and demos
-- ✅ Open source contributions
-- ✅ Student/academic use
-- ✅ Freelancer development work
+Choose this if you're:
+- Learning RHEL
+- Running a home lab
+- Working on personal projects
+- Contributing to open source
+- A student or freelancer
+- Deploying small personal workloads (production's OK for personal use)
 
 **Sign up:** https://developers.redhat.com/register  
-**Email:** Any email address (personal OK)
+**Email:** Use any email (Gmail, whatever)
 
-### RHEL for Business Developers (FREE - launched July 2025)
+### RHEL for Business Developers (free - launched July 2025)
 
-Perfect for:
-- ✅ Company/corporate development work
-- ✅ Business development teams
-- ✅ Testing applications before production deployment
-- ✅ Enterprise development environments
-- ✅ Building apps for business purposes
-- ✅ Need 17-25 systems (more than Individual's 16)
-- ✅ All RHEL architectures required
+Choose this if you're:
+- Developing for your company
+- Part of a dev team at work
+- Testing apps before production
+- Need more than 16 systems
+- Working across different RHEL architectures
 
 **Sign up:** https://developers.redhat.com/products/rhel/business  
-**Email:** Business/corporate email required  
-**Note:** Dev/test ONLY - not for production workloads
+**Email:** Must use your work email  
+**Note:** Dev and test only - use full RHEL subscriptions for production
 
-**Important:** Individual allows production use for personal projects. Business Developers is dev/test only but gives you 25 systems and all RHEL architectures.
+**The catch:** Business Developers is dev/test only. Individual allows production, but only for personal projects. Choose based on who's paying you.
 
 ## Requirements
 
