@@ -41,7 +41,8 @@ From a single user prompt, this skill will:
 |---------|---------|
 | **Cost** | ✅ FREE (no-cost subscription) |
 | **Systems** | Up to 16 entitlements |
-| **Support** | Self-service (community forums, documentation) |
+| **Support** | Self-support (knowledge base, community forums, ASK Red Hat AI) |
+| **Paid Support** | Not available for Individual subscriptions |
 | **SLA** | None |
 | **Use Case** | Personal development, learning, testing, demos, small-scale production |
 | **Intended For** | Individual developers, students, hobbyists, personal projects |
@@ -78,8 +79,9 @@ From a single user prompt, this skill will:
 |---------|---------|
 | **Cost** | ✅ FREE (no-cost subscription) |
 | **Systems** | Up to 25 entitlements per registered user |
-| **Support** | Self-service (optional paid Developer Support available for purchase) |
-| **SLA** | None (unless paid support purchased) |
+| **Support** | Self-support (knowledge base, community forums, ASK Red Hat AI) |
+| **Paid Support** | Red Hat Developer for Teams support available for purchase |
+| **SLA** | None with free self-support; Yes with paid Developer for Teams support |
 | **Use Case** | Business development and testing within enterprises |
 | **Intended For** | Corporate developers, business unit developers, enterprise teams |
 | **Production Use** | ❌ Development/testing ONLY (NOT for production) |
@@ -116,7 +118,8 @@ From a single user prompt, this skill will:
 | **Who** | Individual person | Corporate developers |
 | **Systems** | 16 entitlements | 25 entitlements |
 | **Email** | Any email (personal OK) | Business/corporate email required |
-| **Support** | Self-service | Self-service (paid support available) |
+| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Paid Support** | Not available | Red Hat Developer for Teams (optional purchase) |
 | **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
 | **Architectures** | x86_64 and ARM focused | All RHEL architectures |
@@ -959,4 +962,213 @@ fi
 | **RHEL 9.x** | `rhc` | `subscription-manager` | rhc often pre-installed |
 | **RHEL 8.4+** | `rhc` | `subscription-manager` | Install rhc after registration |
 | **RHEL 8.0-8.3** | `subscription-manager` | - | rhc not fully supported |
+
+
+## Support Options
+
+Both subscription types include comprehensive self-support resources at no additional cost. Business Developers can optionally purchase paid support.
+
+### Self-Support (Included with Both Subscriptions)
+
+**Available to:**
+- ✅ Red Hat Developer for Individuals
+- ✅ RHEL for Business Developers
+
+**Included resources:**
+
+1. **Red Hat Knowledge Base**
+   - Access to Red Hat's comprehensive knowledge base
+   - Technical articles, solutions, and best practices
+   - Product documentation
+   - https://access.redhat.com/documentation
+
+2. **Red Hat Community Forums**
+   - Community-driven support
+   - Ask questions and get answers from Red Hat users
+   - Share knowledge and best practices
+   - https://community.redhat.com
+
+3. **ASK Red Hat AI**
+   - AI-powered support assistant
+   - Instant answers to common questions
+   - Searches knowledge base and documentation
+   - Available through Red Hat Customer Portal
+
+4. **Red Hat Developer Resources**
+   - Developer guides and tutorials
+   - Code samples and examples
+   - Learning paths and certifications
+   - https://developers.redhat.com
+
+### Red Hat Developer for Teams Support (Paid - Business Developers Only)
+
+**Available to:**
+- ❌ NOT available for Red Hat Developer for Individuals
+- ✅ Available for RHEL for Business Developers (optional purchase)
+
+**What it includes:**
+- **Professional technical support** from Red Hat engineers
+- **SLA-backed response times** for support cases
+- **Direct access** to Red Hat support engineers
+- **Case management** through Red Hat Customer Portal
+- **Knowledge base** access (also included in free self-support)
+- **Bug fixes and patches** with priority handling
+
+**How to purchase:**
+- Contact Red Hat Sales
+- Available as add-on to RHEL for Business Developers subscription
+- Pricing varies by support level and team size
+
+**When you need it:**
+- Production-critical development environments
+- Compliance requirements mandate vendor support
+- Complex technical issues requiring expert assistance
+- Need guaranteed response times (SLA)
+- Large development teams requiring dedicated support
+
+### Support Comparison
+
+| Support Type | Individual | Business Developers | Business Developers + Teams Support |
+|--------------|-----------|---------------------|-------------------------------------|
+| **Cost** | FREE (included) | FREE (included) | Paid (optional add-on) |
+| **Knowledge Base** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Community Forums** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **ASK Red Hat AI** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Developer Resources** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Technical Support Cases** | ❌ No | ❌ No | ✅ Yes |
+| **SLA Response Times** | ❌ No | ❌ No | ✅ Yes |
+| **Red Hat Engineers** | ❌ No | ❌ No | ✅ Yes |
+| **Priority Bug Fixes** | ❌ No | ❌ No | ✅ Yes |
+
+### Accessing Self-Support Resources
+
+**Knowledge Base:**
+```bash
+# Visit Red Hat Customer Portal
+https://access.redhat.com
+
+# Log in with your Red Hat Developer account
+# Navigate to: Documentation → Product Documentation
+```
+
+**ASK Red Hat AI:**
+```bash
+# Available in Red Hat Customer Portal
+https://access.redhat.com
+
+# Look for "ASK Red Hat" in the support section
+# Type your question in natural language
+# Get AI-powered answers from knowledge base
+```
+
+**Community Forums:**
+```bash
+# Visit Red Hat Community
+https://community.redhat.com
+
+# Browse discussions or post questions
+# No Red Hat account required to read
+# Red Hat account required to post
+```
+
+**Developer Resources:**
+```bash
+# Visit Red Hat Developer
+https://developers.redhat.com
+
+# Access tutorials, guides, and learning paths
+# Download software and tools
+# Join developer programs
+```
+
+### Getting Help
+
+**For both Individual and Business Developers (self-support):**
+
+1. **Search the Knowledge Base first**
+   - Most common issues already documented
+   - Search at https://access.redhat.com
+
+2. **Try ASK Red Hat AI**
+   - Fast AI-powered answers
+   - Searches knowledge base automatically
+
+3. **Ask the Community**
+   - Post on https://community.redhat.com
+   - Other users and Red Hat engineers participate
+
+4. **Check Developer Documentation**
+   - Visit https://developers.redhat.com
+   - Comprehensive guides and tutorials
+
+**For Business Developers with Teams Support (paid):**
+
+1. **Open a Support Case**
+   - Log in to https://access.redhat.com
+   - Click "Open a Support Case"
+   - Provide details about your issue
+   - Red Hat engineer will respond per SLA
+
+2. **Track Case Progress**
+   - View case status in Customer Portal
+   - Receive email notifications
+   - Add attachments and updates
+
+3. **Escalate if Needed**
+   - Request escalation through case management
+   - Contact account team if urgent
+
+### Support Limitations
+
+**What self-support does NOT include:**
+- ❌ Guaranteed response times
+- ❌ Direct access to Red Hat engineers
+- ❌ Ability to open support cases
+- ❌ Priority bug fixes
+- ❌ Custom patches or workarounds
+- ❌ Architecture or design consultation
+- ❌ Production environment support
+
+**What Developer for Teams support does NOT include:**
+- ❌ Support for production workloads (dev/test subscriptions only)
+- ❌ 24x7 support (unless purchased at higher tier)
+- ❌ On-site support
+- ❌ Custom development work
+
+**For production support:**
+- Purchase full RHEL subscriptions
+- Includes Red Hat Production Support
+- Multiple support tiers available (Standard, Premium, etc.)
+
+### Best Practices
+
+**Maximize self-support effectiveness:**
+
+1. **Search before asking**
+   - Check knowledge base first
+   - Use ASK Red Hat AI
+   - Search community forums
+
+2. **Be specific**
+   - Include error messages
+   - Provide RHEL version and architecture
+   - Describe what you've already tried
+
+3. **Use community wisely**
+   - Follow community guidelines
+   - Search before posting
+   - Accept helpful answers
+
+4. **Stay updated**
+   - Follow Red Hat blogs
+   - Subscribe to security advisories
+   - Join developer mailing lists
+
+**When to consider paid support:**
+
+- Development environment is business-critical
+- Need guaranteed response times
+- Complex issues beyond self-support scope
+- Compliance requires vendor support
+- Large team needs dedicated support channel
 

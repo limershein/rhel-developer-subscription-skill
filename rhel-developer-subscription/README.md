@@ -50,7 +50,8 @@ The subscription will NOT work until email verification is complete!
 | **Who For** | Individual developers | Corporate developers |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any email (personal OK) | Business email required |
-| **Support** | Self-service | Self-service (paid option available) |
+| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Paid Support** | Not available | Red Hat Developer for Teams (optional) |
 | **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
 | **Architectures** | x86_64 and ARM focused | All RHEL architectures |

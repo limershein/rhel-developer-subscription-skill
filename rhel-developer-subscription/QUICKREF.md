@@ -20,7 +20,8 @@
 | **Who** | You personally | Corporate developers |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
-| **Support** | Self-service | Self-service (paid available) |
+| **Self-Support** | Knowledge base, forums, ASK Red Hat AI | Knowledge base, forums, ASK Red Hat AI |
+| **Paid Support** | Not available | Developer for Teams (optional) |
 | **Production** | ✅ Personal/small | ❌ Dev/test ONLY |
 | **Included** | RHEL + portfolio | RHEL only |
 | **Sign Up** | developers.redhat.com/register | developers.redhat.com/products/rhel/business |
@@ -251,3 +252,46 @@ sudo podman run --rm --privileged \
 - ✅ **Limit** activation key scope
 - ❌ **Don't** log passwords
 - ✅ **Use** secrets management in CI/CD
+
+## Support Resources (Included FREE)
+
+Both Individual and Business Developers include:
+
+### Self-Support (No Cost)
+```bash
+# Knowledge Base
+https://access.redhat.com/documentation
+
+# ASK Red Hat AI
+https://access.redhat.com
+# (Look for "ASK Red Hat" in support section)
+
+# Community Forums
+https://community.redhat.com
+
+# Developer Resources
+https://developers.redhat.com
+```
+
+### Paid Support (Business Developers Only)
+
+**Red Hat Developer for Teams** - Optional purchase for Business Developers
+
+**Includes:**
+- Technical support from Red Hat engineers
+- SLA-backed response times
+- Direct support case management
+- Priority bug fixes
+
+**NOT available for:**
+- ❌ Individual Developer subscriptions
+
+**To purchase:**
+- Contact Red Hat Sales
+- Available as add-on to Business Developers subscription
+
+**When you need it:**
+- Business-critical dev environments
+- Need guaranteed response times
+- Complex issues requiring expert help
+- Compliance requires vendor support
