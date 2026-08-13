@@ -169,16 +169,62 @@ sudo dnf check-update
 
 ## Common issues
 
+### Subscription expired or needs renewal
+
+**Error:** "No service level will cover all installed products" or subscription shows as expired
+
+**Check subscription status:**
+```bash
+# View subscription expiration
+sudo subscription-manager list --consumed
+
+# Or check online
+# Visit: https://access.redhat.com/management
+# Log in and view "My Subscriptions"
+```
+
+**To renew expired subscription:**
+1. Log in to https://developers.redhat.com
+2. Visit https://developers.redhat.com/products/rhel/download
+3. Start download (can cancel immediately - just triggers renewal)
+4. Wait 5-10 minutes for subscription to refresh
+5. On your RHEL system: `sudo subscription-manager refresh`
+6. Re-attach: `sudo subscription-manager attach --auto`
+
+**If already registered with expired subscription:**
+```bash
+# Unregister first
+sudo subscription-manager unregister
+
+# Then re-register (will get renewed subscription)
+sudo subscription-manager register --username your-email@example.com
+sudo subscription-manager attach --auto
+```
+
 ### "No subscriptions available"
 
-**Most common cause:** Email not verified.
+**Most common causes:**
 
-1. Check email inbox (and spam)
-2. Click verification link
-3. Log in to developers.redhat.com
-4. Visit https://developers.redhat.com/products/rhel/download (triggers activation)
-5. Wait 5-10 minutes
-6. Retry: `sudo subscription-manager attach --auto`
+1. **Email not verified** (for new accounts)
+   - Check email inbox (and spam)
+   - Click verification link
+   - Log in to developers.redhat.com
+   - Visit https://developers.redhat.com/products/rhel/download
+   - Wait 5-10 minutes
+   - Retry: `sudo subscription-manager attach --auto`
+
+2. **Subscription not activated on account**
+   - Log in to https://developers.redhat.com
+   - Visit https://developers.redhat.com/products/rhel/download
+   - Start download (triggers subscription addition)
+   - Check https://access.redhat.com/management for active subscription
+   - Retry registration
+
+3. **JavaScript/browser blockers interfering**
+   - Disable pop-up blockers for developers.redhat.com
+   - Disable tracking/ad blockers temporarily
+   - Try different browser
+   - Ensure JavaScript is enabled
 
 ### "Already registered"
 
@@ -227,12 +273,40 @@ Available in `scripts/`:
 
 **For centralized team deployment:** Contact Red Hat Sales about Red Hat Developer for Teams (FREE, seller-assisted offering with optional Developer support add-on: https://access.redhat.com/support/offerings/developer).
 
+## Checking subscription status
+
+**On your system:**
+```bash
+# View subscription details
+sudo subscription-manager list --consumed
+
+# Check expiration dates
+sudo subscription-manager list --consumed | grep "Ends:"
+
+# Refresh subscription data
+sudo subscription-manager refresh
+```
+
+**Online portal:**
+- Visit: https://access.redhat.com/management
+- Log in with your Red Hat account
+- View "My Subscriptions" to see:
+  - Active subscriptions
+  - Expiration dates
+  - Attached systems (up to 16 for Individual, 25 for Business)
+  - Registration numbers
+
 ## Support resources (free with both subscriptions)
 
 - **Knowledge Base**: https://access.redhat.com/documentation
 - **Ask Red Hat AI**: AI assistant in Customer Portal
 - **Community Forums**: https://community.redhat.com
 - **Developer Resources**: https://developers.redhat.com
+
+**Need help with registration issues?**
+- Web: https://access.redhat.com/support/cases/new
+- Email: customerservice@redhat.com
+- Phone (North America): 1-888-733-4281 (press 3, then 2 for registration help)
 
 **Optional Developer support add-on** (for dev/test environments):
 - Available for RHEL for Business Developers
