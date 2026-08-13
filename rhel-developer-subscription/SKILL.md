@@ -22,15 +22,46 @@ Handles the complete flow: account setup → email verification → system regis
 
 ## Before you start: Do they have RHEL installed?
 
-**Critical**: Users need a Red Hat Developer account BEFORE they can download RHEL.
+**Critical**: You need a Red Hat Developer account BEFORE you can download RHEL.
 
-If they don't have RHEL yet:
-1. Direct them to create account first: https://developers.redhat.com/register
-2. They'll verify email (takes 5-10 minutes)
-3. Then they can download RHEL: https://developers.redhat.com/products/rhel/download
-4. After RHEL is installed, come back and use this skill to register it
+### If they don't have RHEL yet
 
-If they already have RHEL installed, proceed with registration below.
+**Complete workflow: Account → Download → Install → Register**
+
+**Step 1: Create Red Hat Developer account** (required to download RHEL)
+1. Visit https://developers.redhat.com/register
+2. Fill out registration form
+3. Check email for verification link
+4. Click the verification link
+5. Log in to https://developers.redhat.com
+6. Wait 5-10 minutes for account activation
+
+**Step 2: Download RHEL**
+1. Visit https://developers.redhat.com/products/rhel/download
+2. Log in with your Red Hat Developer account
+3. Choose your RHEL version:
+   - RHEL 9 (recommended for most users)
+   - RHEL 8 (for compatibility with older systems)
+   - RHEL 10 Beta (for testing upcoming release)
+4. Select download type:
+   - **Boot ISO** (small, requires internet during install)
+   - **Binary DVD** (full, ~10GB, no internet needed)
+5. Download the ISO file
+
+**Step 3: Install RHEL**
+- For physical hardware: Burn ISO to USB drive (use Fedora Media Writer, Rufus, or dd)
+- For virtual machines: Use ISO with VirtualBox, VMware, KVM/libvirt, or cloud provider
+- Follow Red Hat installation guide: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/performing_a_standard_rhel_9_installation
+
+**Step 4: After RHEL is installed, return here to register it**
+
+Use this skill to register your newly installed RHEL system (continue to "Registration workflow" below).
+
+---
+
+### If they already have RHEL installed
+
+Proceed directly to the "Registration workflow" section below.
 
 ## Quick decision: Which subscription?
 
