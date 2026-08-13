@@ -40,9 +40,9 @@ Handles the complete flow: account setup → email verification → system regis
 1. Visit https://developers.redhat.com/products/rhel/download
 2. Log in with your Red Hat Developer account
 3. Choose your RHEL version:
-   - RHEL 9 (recommended for most users)
+   - RHEL 10 (latest, GA release)
+   - RHEL 9 (stable, widely deployed)
    - RHEL 8 (for compatibility with older systems)
-   - RHEL 10 Beta (for testing upcoming release)
 4. Select download type:
    - **Boot ISO** (small, requires internet during install)
    - **Binary DVD** (full, ~10GB, no internet needed)
@@ -197,26 +197,22 @@ If users see unexpected T&C prompts on login:
 
 ### RHEL 10 repositories
 
-For RHEL 10 (currently in development):
-- **Beta/Development**: Use `-beta` repos during development phase
-- **GA (when released)**: Drop `-beta` suffix
-
-Check current RHEL 10 status at https://developers.redhat.com/products/rhel/download
+RHEL 10 is now GA (General Availability). Use standard repository names without `-beta` suffix:
 
 ```bash
-# Auto-detect and use correct repos
+# RHEL 10 GA repositories
+sudo subscription-manager repos \
+  --enable rhel-10-for-x86_64-baseos-rpms \
+  --enable rhel-10-for-x86_64-appstream-rpms
+```
+
+For auto-detection across all RHEL versions (8, 9, 10):
+
+```bash
 RHEL_VERSION=$(grep -oP 'release \K[0-9]+' /etc/redhat-release)
-if [[ "${RHEL_VERSION}" == "10" ]]; then
-  # Check if GA or beta
-  if grep -qi "beta" /etc/redhat-release; then
-    SUFFIX="-beta"
-  else
-    SUFFIX=""
-  fi
-  sudo subscription-manager repos \
-    --enable "rhel-10-for-x86_64-baseos${SUFFIX}-rpms" \
-    --enable "rhel-10-for-x86_64-appstream${SUFFIX}-rpms"
-fi
+sudo subscription-manager repos \
+  --enable "rhel-${RHEL_VERSION}-for-x86_64-baseos-rpms" \
+  --enable "rhel-${RHEL_VERSION}-for-x86_64-appstream-rpms"
 ```
 
 ## Automation scripts
