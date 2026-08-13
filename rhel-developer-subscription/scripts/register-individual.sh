@@ -152,8 +152,8 @@ case "${RHEL_VERSION}" in
         ;;
     10)
         subscription-manager repos \
-            --enable rhel-10-for-x86_64-baseos-beta-rpms \
-            --enable rhel-10-for-x86_64-appstream-beta-rpms
+            --enable rhel-10-for-x86_64-baseos-rpms \
+            --enable rhel-10-for-x86_64-appstream-rpms
         ;;
     *)
         echo "⚠️  Unknown RHEL version: ${RHEL_VERSION}"

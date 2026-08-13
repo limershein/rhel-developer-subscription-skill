@@ -34,8 +34,8 @@ RUN if [ -n "${ORG_ID}" ] && [ -n "${ACTIVATION_KEY}" ]; then \
         --org="${ORG_ID}" \
         --activationkey="${ACTIVATION_KEY}" && \
       subscription-manager repos \
-        --enable rhel-10-for-x86_64-baseos-beta-rpms \
-        --enable rhel-10-for-x86_64-appstream-beta-rpms; \
+        --enable rhel-10-for-x86_64-baseos-rpms \
+        --enable rhel-10-for-x86_64-appstream-rpms; \
     fi && \
     dnf install -y \
       # Core development tools

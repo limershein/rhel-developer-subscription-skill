@@ -350,7 +350,7 @@ sudo iptables -D OUTPUT -d subscription.rhsm.redhat.com -j DROP
 |--------------|-----------|----------------|
 | 8.10         | rhel-8-for-x86_64-baseos-rpms | rhel-8-for-x86_64-appstream-rpms |
 | 9.5          | rhel-9-for-x86_64-baseos-rpms | rhel-9-for-x86_64-appstream-rpms |
-| 10.0 Beta    | rhel-10-for-x86_64-baseos-beta-rpms | rhel-10-for-x86_64-appstream-beta-rpms |
+| 10.0         | rhel-10-for-x86_64-baseos-rpms | rhel-10-for-x86_64-appstream-rpms |
 
 **Steps:**
 ```bash
