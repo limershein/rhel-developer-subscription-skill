@@ -188,14 +188,17 @@ if [[ "${RHEL_VERSION}" == "10" ]]; then
 fi
 ```
 
-## Automation
+## Automation scripts
 
-For scripts/playbooks, see:
-- `scripts/register-individual.sh` - Interactive Individual registration
-- `scripts/register-business.sh` - Business registration with activation keys
-- `scripts/register-with-rhc.sh` - Modern rhc-first approach
-- `scripts/ansible-register.yml` - Ansible playbook for fleets
-- `scripts/verify-subscription.sh` - Health check script
+Available in `scripts/`:
+- `register-individual.sh` - Interactive Individual registration
+- `register-business.sh` - Business registration with activation keys
+- `register-with-rhc.sh` - Modern rhc-first approach
+- `verify-subscription.sh` - Health check script
+- `ansible-register.yml` - Ansible playbook (for managing your own systems)
+- `bootc-developer.containerfile` - bootc image example
+
+**For centralized team deployment:** Contact Red Hat Sales about Red Hat Developer for Teams (FREE, seller-assisted offering with optional Developer support add-on: https://access.redhat.com/support/offerings/developer).
 
 ## Support resources (free with both subscriptions)
 
@@ -204,7 +207,11 @@ For scripts/playbooks, see:
 - **Community Forums**: https://community.redhat.com
 - **Developer Resources**: https://developers.redhat.com
 
-**Paid support** (Business Developers only): Red Hat Developer for Teams - contact Red Hat Sales
+**Optional Developer support add-on** (for dev/test environments):
+- Available for RHEL for Business Developers
+- Available for Red Hat Developer for Teams
+- Details: https://access.redhat.com/support/offerings/developer
+- Note: This is developer support, not production support
 
 ## More details
 

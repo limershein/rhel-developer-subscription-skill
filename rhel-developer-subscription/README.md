@@ -50,7 +50,7 @@ Both are free. Choose based on who you're working for, not features.
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any email (personal OK) | Business email required |
 | **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
-| **Paid Support** | Not available | Red Hat Developer for Teams (optional) |
+| **Developer Support Add-on** | Not available | Available (optional, dev/test only) |
 | **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
 | **Architectures** | x86_64 and ARM focused | All RHEL architectures |
@@ -142,14 +142,14 @@ Agent:
 ### Business Subscription with Activation Key
 ```
 User: "Register this server with our business developer subscription.
-       Org ID: 1234567, Activation Key: dev-team-rhel9"
+       Org ID: 1234567, Activation Key: my-activation-key"
 
 Agent:
 1. Detects RHEL 9.5
 2. Recognizes business subscription context
 3. Runs: sudo subscription-manager register \
           --org 1234567 \
-          --activationkey dev-team-rhel9
+          --activationkey my-activation-key
 4. Enables repositories
 5. Verifies subscription
 6. Reports success

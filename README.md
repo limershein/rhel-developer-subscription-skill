@@ -2,7 +2,7 @@
 
 **Get your RHEL development environment set up without the subscription hassle.**
 
-This skill teaches AI assistants how to walk you through Red Hat developer subscription registration - from account creation to `dnf install`. Works for both personal dev machines and company development teams.
+This skill teaches AI assistants how to walk you through Red Hat developer subscription registration - from account creation to `dnf install`. Works for individual developers, whether for personal projects or company work.
 
 ## What it does
 
@@ -46,26 +46,24 @@ sudo ./register-business.sh --org 1234567 --key my-activation-key
 sudo ./verify-subscription.sh
 ```
 
-### Register a whole dev team
+### Need team-wide deployment?
 
-```bash
-cd rhel-developer-subscription/examples
+For centralized team management, contact Red Hat Sales about:
+- **Red Hat Developer for Teams** (FREE, seller-assisted)
+- Centralized activation keys
+- Organization-level controls
+- Optional Developer support add-on: https://access.redhat.com/support/offerings/developer
 
-ansible-playbook ansible-register.yml \
-  -i inventory.ini \
-  -e rhsm_org_id=1234567 \
-  -e rhsm_activation_key=fleet-key \
-  -e rhsm_install_dev_tools=true
-```
+Individual developers can self-register up to 16 (Individual) or 25 (Business Developers) systems.
 
 ## Features
 
 ✅ **Automated Registration** - Complete workflow from account to active subscription  
-✅ **Dual Subscription Types** - Individual (free) and Business (paid)  
+✅ **Dual Subscription Types** - Individual (free) and Business Developers (free)  
 ✅ **Version Detection** - Automatic RHEL 8/9/10 support with correct repositories  
 ✅ **Error Handling** - Graceful failures with actionable guidance  
 ✅ **Verification** - Built-in health checks for subscription status  
-✅ **Fleet Management** - Ansible playbook for multiple systems  
+✅ **Modern Tools** - Supports both rhc and subscription-manager  
 ✅ **bootc Integration** - Example Containerfile for image mode RHEL  
 ✅ **Comprehensive Testing** - Full test suite with 10+ scenarios  
 ✅ **Security-First** - Best practices for credential handling  
@@ -166,28 +164,25 @@ sudo ./register-individual.sh user@example.com
 11. Verifies: `dnf repolist` shows repositories
 12. Reports: "✅ RHEL Developer subscription active. Next steps: ..."
 
-### Example 2: Business Team Fleet
+### Example 2: Using rhc (Modern Approach)
 
-**Scenario:** Register 50 RHEL systems for development team
+**Scenario:** Register RHEL 9 system with rhc tool
 
 ```bash
-# Create inventory
-cat > inventory.ini <<EOF
-[dev_servers]
-dev-rhel-[01:50].example.com
-EOF
+# One command registration with rhc
+sudo rhc connect --username developer@example.com
 
-# Run Ansible playbook
-cd rhel-developer-subscription/examples
-ansible-playbook ansible-register.yml \
-  -i inventory.ini \
-  -e rhsm_org_id=1234567 \
-  -e rhsm_activation_key=dev-team-rhel9 \
-  -e rhsm_install_dev_tools=true \
-  -e rhsm_update_packages=true
+# rhc automatically:
+# - Registers the system
+# - Attaches subscription
+# - Enables repositories
+# - Connects to Insights
 
-# Result: All 50 systems registered, dev tools installed, updated
+# Verify
+sudo rhc status
 ```
+
+**For team-wide deployment:** Contact Red Hat Sales about Red Hat Developer for Teams (FREE, seller-assisted, with optional Developer support add-on).
 
 ### Example 3: bootc Developer Image
 
@@ -248,7 +243,7 @@ sudo ./verify-subscription.sh
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
 | **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
-| **Paid Support** | Not available | Red Hat Developer for Teams (optional) |
+| **Developer Support Add-on** | Not available | Available (optional, dev/test only) |
 | **Production** | ✅ Personal/small-scale | ❌ Dev/test ONLY |
 | **What's Included** | RHEL + Red Hat portfolio | RHEL only |
 | **Architectures** | x86_64 and ARM | All RHEL architectures |
