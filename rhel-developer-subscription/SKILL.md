@@ -2,7 +2,7 @@
 name: rhel-developer-subscription
 description: Register RHEL systems with Red Hat Developer subscriptions (Individual or Business Developers). Handles account creation, email verification, system registration with subscription-manager or rhc, repository enablement, and troubleshooting. Use when setting up RHEL development environments.
 license: MIT
-compatibility: Requires RHEL 8.4+ system with subscription-manager or rhc installed
+compatibility: Covers complete workflow from account creation through RHEL download, installation, and registration. Works with RHEL 8.4+, 9.x, and 10.x systems using subscription-manager or rhc.
 metadata:
   version: "2.0"
   author: Red Hat
@@ -317,6 +317,7 @@ sudo subscription-manager refresh
 ## More details
 
 - [Quick Reference](references/QUICKREF.md) - Command cheat sheet
+- [Email Verification Guide](references/EMAIL-VERIFICATION.md) - Detailed email verification workflow and troubleshooting
 - [Testing Guide](references/TESTING.md) - Test scenarios and validation
 - [README](README.md) - Overview and examples
 
