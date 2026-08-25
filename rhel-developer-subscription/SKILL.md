@@ -111,6 +111,8 @@ fi
 1. Visit https://developers.redhat.com/products/rhel/business
 2. Use work email
 3. Same email verification process
+4. After verification, you get **your own organization** in console.redhat.com
+5. You can create activation keys for easier registration (optional but recommended)
 
 **Can't skip email verification.** Grab coffee while you wait.
 
@@ -142,15 +144,32 @@ sudo subscription-manager repos \
   --enable "rhel-${RHEL_VERSION}-for-x86_64-appstream-rpms"
 ```
 
-**For Business with activation key:**
+**Option C: Business Developers with activation key (recommended for automation)**
+
+When you sign up for RHEL for Business Developers, **you can create your own activation keys**:
+
+1. Log in to https://console.redhat.com
+2. Go to **Inventory** → **Activation Keys**
+3. Click **Create Activation Key**
+4. Name it (e.g., "my-dev-systems")
+5. Note your **Organization ID** (shown in the UI)
+6. Use the key to register:
 
 ```bash
 # subscription-manager
-sudo subscription-manager register --org ORG_ID --activationkey KEY_NAME
+sudo subscription-manager register --org YOUR_ORG_ID --activationkey YOUR_KEY_NAME
 
 # Or with rhc
-sudo rhc connect --organization ORG_ID --activation-key KEY_NAME
+sudo rhc connect --organization YOUR_ORG_ID --activation-key YOUR_KEY_NAME
 ```
+
+**Benefits of activation keys:**
+- More secure (don't expose your password)
+- Better for automation (Ansible, scripts)
+- Can scope to specific repos
+- Can set role/usage metadata
+
+**Note:** Individual Developer subscriptions cannot create activation keys (use username/password).
 
 ### Step 4: Verify
 
