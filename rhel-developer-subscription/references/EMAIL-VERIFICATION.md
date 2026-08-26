@@ -2,7 +2,7 @@
 
 ## Critical: Email Verification is Required
 
-The RHEL Developer for Individuals subscription **requires email verification** before it can be used. This is a multi-step process that takes 5-10 minutes.
+Both **Red Hat Developer for Individuals** and **RHEL for Business Developers** are **FREE**, and both **require email verification** before the subscription can be used. This is a multi-step process that takes 5-10 minutes.
 
 ## Complete Registration Flow
 
@@ -147,30 +147,32 @@ For **automated workflows** (scripts, CI/CD):
 ❌ **Cannot automate** email verification (human must click link)
 
 ✅ **Can automate** everything after verification:
-- Use activation keys (Business subscriptions)
+- Use activation keys (RHEL for Business Developers)
 - Or store verified credentials securely
 - Run registration scripts
 
 **Recommendation for teams:**
-- Use **RHEL Developer Suite for Business** with activation keys
-- No email verification required per-system
-- One-time setup, reusable keys
+- Use **RHEL for Business Developers** (FREE) with activation keys
+- Email verification happens once, at account creation
+- After that, activation keys let you register additional systems without re-verifying each one
 - Better for automation
 
-## Business Subscriptions (No Email Verification)
+## RHEL for Business Developers and Activation Keys
 
-**RHEL Developer Suite for Business** does NOT require email verification per system:
+**RHEL for Business Developers** is **FREE** (25 systems per user, business email required). Like Individual, it requires email verification **once**, when you create your account:
 
-1. Purchase subscription (one-time, through Red Hat Sales)
-2. Receive Organization ID and Activation Key
-3. Register systems immediately:
+1. Sign up at https://developers.redhat.com/products/rhel/business (free, business email)
+2. Verify your email (same one-time process as Individual)
+3. Log in to https://console.redhat.com and create an activation key (Inventory → Activation Keys)
+4. Register systems using the key — no further email verification needed per system:
    ```bash
    sudo subscription-manager register \
      --org YOUR_ORG_ID \
      --activationkey YOUR_KEY
    ```
-4. No waiting, no email verification
-5. Ideal for teams and automation
+5. Reuse the same key across multiple systems (up to 25) — ideal for automation
+
+**Note:** You create the activation key yourself in console.redhat.com — no need to purchase anything or wait on an administrator.
 
 ## Workflow Diagram
 
@@ -233,7 +235,7 @@ When an AI agent guides a user through this process:
 2. **Set expectations** about 5-10 minute wait time
 3. **Check if email is verified** before attempting registration
 4. **Provide troubleshooting** for common email issues
-5. **Offer Business subscription alternative** for teams/automation
+5. **Offer RHEL for Business Developers (also FREE)** as an alternative for teams/automation
 
 **Example AI Agent Flow:**
 
@@ -267,11 +269,11 @@ Agent: "I'll help you set up a Red Hat Developer for Individuals
 
 ## Summary
 
-✅ **Email verification is mandatory** for Individual subscriptions  
+✅ **Email verification is mandatory** for both Individual and Business Developers (FREE) subscriptions  
 ✅ **Allow 5-10 minutes** after verification for activation  
 ✅ **Check spam folder** if email doesn't arrive  
 ✅ **Visit RHEL product page** to trigger subscription  
-✅ **Use Business subscriptions** for automation/teams  
+✅ **Use RHEL for Business Developers (FREE)** activation keys for automation/teams — no per-system re-verification needed  
 
 ❌ **Cannot skip** email verification  
 ❌ **Cannot automate** clicking verification link  

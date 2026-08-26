@@ -184,8 +184,8 @@ sudo tail -f /var/log/rhsm/rhsm.log
 
 ## URLs
 
-- **Sign Up (Individual):** https://developers.redhat.com/register
-- **Purchase (Business):** https://www.redhat.com/en/store/red-hat-enterprise-linux-developer-suite
+- **Sign Up (Individual, FREE):** https://developers.redhat.com/register
+- **Sign Up (Business Developers, FREE):** https://developers.redhat.com/products/rhel/business
 - **Customer Portal:** https://access.redhat.com
 - **Documentation:** https://access.redhat.com/documentation/en-us/red_hat_subscription_management
 - **RHEL Docs:** https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux
@@ -255,7 +255,7 @@ sudo podman run --rm --privileged \
 
 ## Support Resources (Included FREE)
 
-Both Individual and Business Developers include:
+Both Individual (FREE) and Business Developers (FREE) include:
 
 ### Self-Support (No Cost)
 ```bash
@@ -273,9 +273,9 @@ https://community.redhat.com
 https://developers.redhat.com
 ```
 
-### Paid Support (Business Developers Only)
+### Optional Developer Support Add-on (Dev/Test Only)
 
-**Red Hat Developer for Teams** - Optional purchase for Business Developers
+Both **RHEL for Business Developers (FREE)** and **Red Hat Developer for Teams (FREE, seller-assisted)** offer an optional **Developer support add-on** for dev/test environments:
 
 **Includes:**
 - Technical support from Red Hat engineers
@@ -286,12 +286,12 @@ https://developers.redhat.com
 **NOT available for:**
 - ❌ Individual Developer subscriptions
 
-**To purchase:**
-- Contact Red Hat Sales
-- Available as add-on to Business Developers subscription
+**Details:** https://access.redhat.com/support/offerings/developer
 
 **When you need it:**
-- Business-critical dev environments
+- Business-critical dev/test environments
 - Need guaranteed response times
 - Complex issues requiring expert help
 - Compliance requires vendor support
+
+**Note:** This is developer support for dev/test — not production support.
