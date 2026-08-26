@@ -290,7 +290,7 @@ Available in `scripts/`:
 - `ansible-register.yml` - Ansible playbook (for managing your own systems)
 - `bootc-developer.containerfile` - bootc image example
 
-**For centralized team deployment:** Contact Red Hat Sales about Red Hat Developer for Teams (FREE, seller-assisted offering with optional Developer support add-on: https://access.redhat.com/support/offerings/developer).
+**RHEL for Business Developers is self-service** — sign up directly, no seller involved. For centralized/managed team deployment instead, contact Red Hat Sales about **Red Hat Developer for Teams** (FREE, delivered by Red Hat sellers, with optional Developer support add-on: https://access.redhat.com/support/offerings/developer).
 
 ## Checking subscription status
 

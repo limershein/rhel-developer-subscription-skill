@@ -48,13 +48,13 @@ sudo ./verify-subscription.sh
 
 ### Need team-wide deployment?
 
-For centralized team management, contact Red Hat Sales about:
-- **Red Hat Developer for Teams** (FREE, seller-assisted)
+**RHEL for Business Developers is self-service** — sign up directly with a business email, no seller needed. You can self-register up to 16 (Individual) or 25 (Business Developers) systems, and create your own activation keys in console.redhat.com.
+
+For centralized/managed team deployment instead, contact Red Hat Sales about:
+- **Red Hat Developer for Teams** (FREE, delivered by Red Hat sellers)
 - Centralized activation keys
 - Organization-level controls
 - Optional Developer support add-on: https://access.redhat.com/support/offerings/developer
-
-Individual developers can self-register up to 16 (Individual) or 25 (Business Developers) systems.
 
 ## Features
 
@@ -182,7 +182,7 @@ sudo rhc connect --username developer@example.com
 sudo rhc status
 ```
 
-**For team-wide deployment:** Contact Red Hat Sales about Red Hat Developer for Teams (FREE, seller-assisted, with optional Developer support add-on).
+**For team-wide deployment** instead of self-service Business Developers: Contact Red Hat Sales about Red Hat Developer for Teams (FREE, delivered by Red Hat sellers, with optional Developer support add-on).
 
 ### Example 3: bootc Developer Image
 

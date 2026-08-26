@@ -18,15 +18,18 @@
 | **Cost** | ✅ FREE | ✅ FREE |
 | **Launch** | Long-standing | July 2025 |
 | **Who** | You personally | Corporate developers |
+| **Delivery** | Self-service | Self-service |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
 | **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
-| **Paid Support** | Not available | Developer for Teams (optional) |
+| **Optional Support Add-on** | Not available | Developer support (dev/test only) |
 | **Production** | ✅ Personal/small | ❌ Dev/test ONLY |
 | **Included** | RHEL + portfolio | RHEL only |
 | **Sign Up** | developers.redhat.com/register | developers.redhat.com/products/rhel/business |
 
-**When in doubt:** Personal projects with any email → Individual. Company work with business email → Business Developers.
+**When in doubt:** Personal projects with any email → Individual. Company work with business email → Business Developers (sign up yourself, no seller needed).
+
+**Note:** For centralized/managed team deployment instead of self-service, **Red Hat Developer for Teams** (FREE, delivered by Red Hat sellers) is a separate option — see below.
 
 ## One-Liners
 
@@ -275,7 +278,7 @@ https://developers.redhat.com
 
 ### Optional Developer Support Add-on (Dev/Test Only)
 
-Both **RHEL for Business Developers (FREE)** and **Red Hat Developer for Teams (FREE, seller-assisted)** offer an optional **Developer support add-on** for dev/test environments:
+Both **RHEL for Business Developers (FREE, self-service)** and **Red Hat Developer for Teams (FREE, delivered by Red Hat sellers)** offer an optional **Developer support add-on** for dev/test environments:
 
 **Includes:**
 - Technical support from Red Hat engineers
