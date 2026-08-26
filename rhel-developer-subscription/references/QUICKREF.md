@@ -65,6 +65,10 @@ sudo ./register-individual.sh myuser@example.com
 ```
 
 ### Register (Business)
+
+**RHEL for Business Developers:** create your own key in console.redhat.com (self-service).
+**Red Hat Developer for Teams:** get the key and org ID from your IT department (centrally managed).
+
 ```bash
 # With activation key (best for automation)
 sudo subscription-manager register --org 1234567 --activationkey my-key

@@ -171,6 +171,8 @@ sudo rhc connect --organization YOUR_ORG_ID --activation-key YOUR_KEY_NAME
 
 **Note:** Individual Developer subscriptions cannot create activation keys (use username/password).
 
+**If your organization uses Red Hat Developer for Teams instead:** Don't create your own activation key — get it from your organization's IT department. Developer for Teams is centrally managed by your employer's Red Hat account, so activation keys and Organization ID come from IT, not self-service.
+
 ### Step 4: Verify
 
 ```bash
@@ -290,7 +292,7 @@ Available in `scripts/`:
 - `ansible-register.yml` - Ansible playbook (for managing your own systems)
 - `bootc-developer.containerfile` - bootc image example
 
-**RHEL for Business Developers is self-service** — sign up directly, no seller involved. For centralized/managed team deployment instead, contact Red Hat Sales about **Red Hat Developer for Teams** (FREE, delivered by Red Hat sellers, with optional Developer support add-on: https://access.redhat.com/support/offerings/developer).
+**RHEL for Business Developers is self-service** — sign up directly, create your own activation key in console.redhat.com, no seller involved. For centralized/managed team deployment instead, your organization can work with Red Hat Sales to set up **Red Hat Developer for Teams** (FREE, delivered by Red Hat sellers, with optional Developer support add-on: https://access.redhat.com/support/offerings/developer). **If your organization already uses Developer for Teams, get your activation key from your IT department** — it's centrally managed, not self-service.
 
 ## Checking subscription status
 

@@ -56,6 +56,8 @@ For centralized/managed team deployment instead, contact Red Hat Sales about:
 - Organization-level controls
 - Optional Developer support add-on: https://access.redhat.com/support/offerings/developer
 
+**Already on Developer for Teams?** Get your activation key and Organization ID from your organization's IT department — it's centrally managed, not self-service like Business Developers.
+
 ## Features
 
 ✅ **Automated Registration** - Complete workflow from account to active subscription  
