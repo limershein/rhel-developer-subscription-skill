@@ -3,6 +3,22 @@ name: rhel-developer-subscription
 description: Register RHEL systems with Red Hat Developer subscriptions (Individual or Business Developers). Handles account creation, email verification, system registration with subscription-manager or rhc, repository enablement, and troubleshooting. Use when setting up RHEL development environments.
 license: MIT
 compatibility: Covers complete workflow from account creation through RHEL download, installation, and registration. Works with RHEL 8.4+, 9.x, and 10.x systems using subscription-manager or rhc.
+allowed-tools:
+  - Bash(cat /etc/redhat-release)
+  - Bash(grep -oP 'release \K[0-9]+' /etc/redhat-release)
+  - Bash(subscription-manager status)
+  - Bash(sudo subscription-manager status)
+  - Bash(subscription-manager identity)
+  - Bash(sudo subscription-manager identity)
+  - Bash(subscription-manager list *)
+  - Bash(sudo subscription-manager list *)
+  - Bash(subscription-manager repos --list*)
+  - Bash(sudo subscription-manager repos --list*)
+  - Bash(subscription-manager refresh)
+  - Bash(sudo subscription-manager refresh)
+  - Bash(dnf repolist*)
+  - Bash(rhc status)
+  - Bash(sudo rhc status)
 metadata:
   version: "2.0"
   author: Red Hat
@@ -19,6 +35,15 @@ Walks users through registering RHEL systems with Red Hat Developer subscription
 - **RHEL for Business Developers** (free, 25 systems, work use)
 
 Handles the complete flow: account setup → email verification → system registration → repo enablement → verification.
+
+## Trust the live system over this doc
+
+Red Hat's subscription offerings, sign-up URLs, and repository names change over time (this skill has needed corrections for exactly this — e.g. RHEL 10 repos dropping their `-beta` suffix at GA). If a command below disagrees with what you observe, trust the live source, not this doc:
+
+- **Repository names:** `sudo subscription-manager repos --list` (live list beats any hardcoded name here)
+- **Subscription/entitlement status:** `sudo subscription-manager status` and `sudo subscription-manager list --consumed`
+- **Account, organization, and activation key details:** https://console.redhat.com
+- **Pricing and offering details:** https://developers.redhat.com and https://access.redhat.com
 
 ## Before you start: Do they have RHEL installed?
 
