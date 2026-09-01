@@ -85,8 +85,6 @@ rhel-developer-subscription/
     ├── verify-subscription.sh     # Verification script
     ├── ansible-register.yml       # Ansible playbook
     └── bootc-developer.containerfile  # bootc image example
-
-INTEGRATION.md            # Guide for adding to TAILWIND monorepo
 ```
 
 ## Documentation
@@ -97,7 +95,6 @@ INTEGRATION.md            # Guide for adding to TAILWIND monorepo
 | [README.md](rhel-developer-subscription/README.md) | Quick start and overview | All users |
 | [TESTING.md](rhel-developer-subscription/TESTING.md) | Test cases and procedures | Testers, QA |
 | [QUICKREF.md](rhel-developer-subscription/QUICKREF.md) | Command reference card | System administrators |
-| [INTEGRATION.md](INTEGRATION.md) | Integration with TAILWIND | Maintainers |
 
 ## Requirements
 
@@ -111,27 +108,6 @@ Optional:
 - Podman 4.0+ (for bootc examples)
 
 ## Installation
-
-### For TAILWIND Monorepo
-
-See [INTEGRATION.md](INTEGRATION.md) for complete integration guide.
-
-```bash
-# Clone TAILWIND
-git clone git@gitlab.com:tailwind/tailwind.git ~/Projects/tailwind
-
-# Copy skill
-cp -r rhel-developer-subscription ~/Projects/tailwind/skills/
-
-# Commit
-cd ~/Projects/tailwind
-git checkout -b add-rhel-developer-subscription
-git add skills/rhel-developer-subscription
-git commit -m "Add RHEL developer subscription skill"
-git push origin add-rhel-developer-subscription
-```
-
-### Standalone Usage
 
 ```bash
 # Clone this repository
@@ -329,7 +305,7 @@ See [SKILL.md](rhel-developer-subscription/SKILL.md) for complete troubleshootin
 
 ## Contributing
 
-This skill is part of the TAILWIND monorepo. Contributions welcome:
+Contributions welcome:
 
 1. Fork the repository
 2. Create feature branch: `git checkout -b feature/my-improvement`
@@ -351,11 +327,11 @@ Current version: **1.0.0** (see [VERSION](rhel-developer-subscription/VERSION))
 
 ## License
 
-Per TAILWIND monorepo license.
+MIT — see [LICENSE](LICENSE).
 
 ## Support
 
-- **Skill Issues:** File issue in TAILWIND repository
+- **Skill Issues:** File an issue in this repository
 - **RHEL Subscriptions:** https://access.redhat.com/support
 - **Developer Program:** https://developers.redhat.com/support
 
@@ -367,13 +343,9 @@ Per TAILWIND monorepo license.
 - **Documentation:** https://access.redhat.com/documentation/en-us/red_hat_subscription_management
 - **RHEL Docs:** https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux
 
-## Maintainer
-
-See [MAINTAINERS.md](MAINTAINERS.md) (TAILWIND monorepo).
-
 ## Acknowledgments
 
-- Built for the TAILWIND program (Red Hat Products AI CoE)
+- Built as a personal experiment in Agent-Skills-based developer tooling — not an official Red Hat deliverable
 - Follows [Agent Skills](https://agentskills.io) specification
 - Designed for Claude Code and compatible AI assistants
 
@@ -381,6 +353,5 @@ See [MAINTAINERS.md](MAINTAINERS.md) (TAILWIND monorepo).
 
 **Quick Links:**
 - [Get Started →](rhel-developer-subscription/README.md)
-- [Integration Guide →](INTEGRATION.md)
 - [Test Guide →](rhel-developer-subscription/TESTING.md)
 - [Quick Reference →](rhel-developer-subscription/QUICKREF.md)

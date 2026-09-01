@@ -118,10 +118,6 @@ Load this skill when user prompt matches:
 - "rhel for business"
 - "activate rhel subscription"
 
-### For TAILWIND Monorepo
-
-Add to `skills/rhel-developer-subscription/SKILL.md` and register in index.
-
 ## Examples
 
 ### Basic Individual Subscription
@@ -173,8 +169,4 @@ sudo dnf repolist
 
 ## License
 
-Per TAILWIND monorepo license.
-
-## Maintainer
-
-See MAINTAINERS.md in repository root.
+MIT — see [LICENSE](../LICENSE).
