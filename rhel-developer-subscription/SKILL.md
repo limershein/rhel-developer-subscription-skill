@@ -28,6 +28,8 @@ metadata:
 
 Get developers from "I need RHEL" to "dnf install works."
 
+**About `allowed-tools` above:** it intentionally includes only read-only diagnostic commands (`subscription-manager status/list/identity/repos --list/refresh`, `dnf repolist`, `rhc status`, version checks). Commands that register, attach, unregister, or enable repositories are deliberately excluded and require explicit per-run approval, because they touch credentials and mutate system state.
+
 ## What this does
 
 Walks users through registering RHEL systems with Red Hat Developer subscriptions:
@@ -44,6 +46,8 @@ Red Hat's subscription offerings, sign-up URLs, and repository names change over
 - **Subscription/entitlement status:** `sudo subscription-manager status` and `sudo subscription-manager list --consumed`
 - **Account, organization, and activation key details:** https://console.redhat.com
 - **Pricing and offering details:** https://developers.redhat.com and https://access.redhat.com
+
+This also applies to workflow steps, not just data: if this doc recommends `rhc` but it isn't installed on the live system, fall back to the documented `subscription-manager` alternative rather than treating the missing tool as a blocker.
 
 ## Before you start: Do they have RHEL installed?
 
