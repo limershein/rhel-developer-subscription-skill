@@ -78,6 +78,46 @@ For centralized/managed team deployment instead, contact Red Hat Sales about:
 ✅ **Comprehensive Testing** - Full test suite with 10+ scenarios
 ✅ **Security-First** - Best practices for credential handling
 
+## Decision flowchart
+
+This process branches a lot — which subscription, which tool, new account or existing, and several troubleshooting paths. Here's the whole thing at a glance:
+
+```mermaid
+flowchart TD
+  A[Start] --> B{RHEL installed?}
+  B -- No --> C[Create Red Hat account]
+  C --> D{Which RHEL version? 8, 9, or 10}
+  D --> E{Boot ISO or Binary DVD?<br/>Physical or VM?}
+  E --> F[Install RHEL]
+  F --> G
+  B -- Yes --> G{Already registered?}
+  G -- Yes --> G2{Subscription expired?}
+  G2 -- Yes --> G3[Unregister, then re-register]
+  G2 -- No --> Z[Verify and done]
+  G -- No --> H{New account or existing?}
+  H -- New --> I[Sign up and verify email]
+  H -- Existing --> J{Email verified?}
+  J -- No --> I
+  J -- Yes --> K{Individual or Business Developers?}
+  I --> K
+  K -- Individual --> L[Personal email, up to 16 systems]
+  K -- Business --> M{Production, or dev/test only?}
+  M --> N{Self-service Business Developers,<br/>or IT-issued Developer for Teams key?}
+  N -- Self-service --> O[Business email, up to 25 systems]
+  N -- IT-issued --> P[Get activation key and Org ID from IT]
+  L --> Q{rhc or subscription-manager?}
+  O --> Q
+  P --> Q
+  Q --> R[Register system]
+  R --> S{Unexpected Terms and<br/>Conditions prompt?}
+  S -- Yes --> T[Accept, then continue]
+  S -- No --> U
+  T --> U{"No subscriptions available"?}
+  U -- Yes --> V[Check: email verified? subscription<br/>activated? browser blocker?]
+  V --> I
+  U -- No --> Z
+```
+
 ## Repository Structure
 
 ```
