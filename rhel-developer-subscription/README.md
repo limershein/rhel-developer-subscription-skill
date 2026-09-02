@@ -105,7 +105,8 @@ Choose this if you're:
 
 - `SKILL.md` — Full skill specification with workflows and troubleshooting
 - `README.md` — This overview
-- `examples/` — Example automation scripts
+- `scripts/` — Automation scripts
+- `references/` — Command reference, email verification guide, test scenarios
 
 ## Integration
 
