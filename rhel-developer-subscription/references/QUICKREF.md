@@ -1,5 +1,7 @@
 # Quick Reference - RHEL Developer Subscriptions
 
+Two subscription types: **Red Hat Developer for Individuals** ("Individual") and **RHEL for Business Developers** ("Business Developers"). Both free.
+
 ## Subscription Types
 
 ### Quick Decision Guide

@@ -2,6 +2,8 @@
 
 Get your RHEL system registered and ready to code. Fast.
 
+> New here? Start at the [repository root README](../README.md) for prerequisites and the full walkthrough. This file is a quick reference for the skill directory itself.
+
 ## Quick Start
 
 Just ask:
