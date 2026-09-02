@@ -34,7 +34,7 @@ That's it. The AI loads this skill and walks you through the rest.
 ### Skip the AI, run the scripts
 
 ```bash
-cd rhel-developer-subscription/examples
+cd rhel-developer-subscription/scripts
 
 # Personal dev machine
 sudo ./register-individual.sh user@example.com
@@ -76,15 +76,18 @@ For centralized/managed team deployment instead, contact Red Hat Sales about:
 rhel-developer-subscription/
 ├── SKILL.md              # Complete skill specification (AI agent)
 ├── README.md             # Overview and quick start
-├── TESTING.md            # Comprehensive test guide
-├── QUICKREF.md           # Command quick reference
 ├── VERSION               # Semantic version
-└── examples/
-    ├── register-individual.sh     # Individual subscription script
-    ├── register-business.sh       # Business subscription script
-    ├── verify-subscription.sh     # Verification script
-    ├── ansible-register.yml       # Ansible playbook
-    └── bootc-developer.containerfile  # bootc image example
+├── scripts/
+│   ├── register-individual.sh     # Individual subscription script
+│   ├── register-business.sh       # Business subscription script
+│   ├── register-with-rhc.sh       # Modern rhc-first registration
+│   ├── verify-subscription.sh     # Verification script
+│   ├── ansible-register.yml       # Ansible playbook
+│   └── bootc-developer.containerfile  # bootc image example
+└── references/
+    ├── EMAIL-VERIFICATION.md      # Email verification deep-dive
+    ├── QUICKREF.md                # Command quick reference
+    └── TESTING.md                 # Comprehensive test guide
 ```
 
 ## Documentation
@@ -93,8 +96,9 @@ rhel-developer-subscription/
 |----------|---------|----------|
 | [SKILL.md](rhel-developer-subscription/SKILL.md) | Complete skill specification with workflows | AI agents, developers |
 | [README.md](rhel-developer-subscription/README.md) | Quick start and overview | All users |
-| [TESTING.md](rhel-developer-subscription/TESTING.md) | Test cases and procedures | Testers, QA |
-| [QUICKREF.md](rhel-developer-subscription/QUICKREF.md) | Command reference card | System administrators |
+| [EMAIL-VERIFICATION.md](rhel-developer-subscription/references/EMAIL-VERIFICATION.md) | Email verification walkthrough — the #1 source of confusion | All users |
+| [TESTING.md](rhel-developer-subscription/references/TESTING.md) | Test cases and procedures | Testers, QA |
+| [QUICKREF.md](rhel-developer-subscription/references/QUICKREF.md) | Command reference card | System administrators |
 
 ## Requirements
 
@@ -115,10 +119,10 @@ git clone <this-repo-url> rhel-developer-subscription
 cd rhel-developer-subscription
 
 # Make scripts executable
-chmod +x rhel-developer-subscription/examples/*.sh
+chmod +x rhel-developer-subscription/scripts/*.sh
 
 # Use scripts directly
-cd rhel-developer-subscription/examples
+cd rhel-developer-subscription/scripts
 sudo ./register-individual.sh user@example.com
 ```
 
@@ -167,7 +171,7 @@ sudo rhc status
 **Scenario:** Build custom RHEL 10 image with developer tools
 
 ```bash
-cd rhel-developer-subscription/examples
+cd rhel-developer-subscription/scripts
 
 # Build image
 podman build -f bootc-developer.containerfile \
@@ -189,7 +193,7 @@ sudo podman run --rm --privileged \
 Comprehensive test suite covering 10 scenarios:
 
 ```bash
-cd rhel-developer-subscription/examples
+cd rhel-developer-subscription/scripts
 
 # Test 1: Individual registration
 sudo ./register-individual.sh user@example.com
@@ -197,7 +201,7 @@ sudo ./register-individual.sh user@example.com
 # Test 4: Verification
 sudo ./verify-subscription.sh
 
-# See TESTING.md for all 10 test cases
+# See references/TESTING.md for all 10 test cases
 ```
 
 ## Subscription Types Comparison
@@ -353,5 +357,5 @@ MIT — see [LICENSE](LICENSE).
 
 **Quick Links:**
 - [Get Started →](rhel-developer-subscription/README.md)
-- [Test Guide →](rhel-developer-subscription/TESTING.md)
-- [Quick Reference →](rhel-developer-subscription/QUICKREF.md)
+- [Test Guide →](rhel-developer-subscription/references/TESTING.md)
+- [Quick Reference →](rhel-developer-subscription/references/QUICKREF.md)
