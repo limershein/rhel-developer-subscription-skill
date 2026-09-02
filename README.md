@@ -206,60 +206,16 @@ sudo ./verify-subscription.sh
 
 ## Subscription Types Comparison
 
-### Which Subscription Do You Need?
-
 **Simple question:** Is this for **personal use** or for **your company/employer**?
-
-- 👤 **Personal** (learning, home lab, side projects) → **Individual** (FREE)
-- 🏢 **Work** (company dev, testing, business projects) → **Business Developers** (FREE)
-
-**Both are FREE!** The difference is personal vs business use, not cost.
-
-### Detailed Comparison
 
 | Feature | Individual (FREE) | Business Developers (FREE) |
 |---------|-------------------|----------------------------|
-| **Cost** | ✅ FREE | ✅ FREE |
-| **Launch** | Long-standing | July 2025 |
-| **Best For** | Individual developers | Corporate developers |
+| **Best for** | Personal use — learning, home lab, side projects | Work use — company dev, testing |
 | **Systems** | Up to 16 | Up to 25 per user |
 | **Email** | Any (personal OK) | Business email required |
-| **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
-| **Developer Support Add-on** | Not available | Available (optional, dev/test only) |
 | **Production** | ✅ Personal/small-scale | ❌ Dev/test ONLY |
-| **What's Included** | RHEL + Red Hat portfolio | RHEL only |
-| **Architectures** | x86_64 and ARM | All RHEL architectures |
-| **Use Case** | Personal learning, home lab, small prod | Business dev/testing |
-| **Registration** | Email verification required | Email verification required |
-| **Sign Up** | https://developers.redhat.com/register | https://developers.redhat.com/products/rhel/business |
 
-### When to Use Individual (FREE)
-
-✅ You're learning RHEL  
-✅ Personal development workstation  
-✅ Home lab environment  
-✅ Personal/small-scale production use  
-✅ Testing and experimentation  
-✅ Student/academic projects  
-✅ Open source contributions  
-✅ Individual freelancer development  
-✅ Any email address (personal OK)  
-
-### When to Use Business Developers (FREE - July 2025)
-
-✅ Company/corporate development work  
-✅ Business development teams  
-✅ Testing apps before production deployment  
-✅ Enterprise development environments  
-✅ Need 17-25 systems (more than Individual's 16)  
-✅ All RHEL architectures required  
-✅ Have business/corporate email  
-❌ Dev/test ONLY (not for production)  
-
-**Important:** 
-- **Individual** allows production for personal/small-scale use
-- **Business Developers** is dev/test only (use full RHEL subs for business production)
-- **Both are FREE** - choose based on personal vs business use, not cost!
+**Both are FREE!** The difference is personal vs business use, not cost. Full comparison (support options, architectures, sign-up links): [references/QUICKREF.md](rhel-developer-subscription/references/QUICKREF.md).
 
 ## Security Best Practices
 

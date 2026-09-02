@@ -35,26 +35,14 @@ Your subscription won't work until you verify your email. It's quick, but you ca
 
 **Simple question:** Personal or work?
 
-- 👤 **Personal** (learning, home lab, side projects) → Individual (free)
-- 🏢 **Work** (company dev, testing) → Business Developers (free)
-
-Both are free. Choose based on who you're working for, not features.
-
-### Detailed Comparison
-
-| Feature | Individual | Business Developers |
-|---------|-----------|---------------------|
-| **Cost** | ✅ FREE | ✅ FREE |
-| **Launch** | Long-standing | July 2025 |
-| **Who For** | Individual developers | Corporate developers |
+| Feature | Individual (FREE) | Business Developers (FREE) |
+|---------|-------------------|----------------------------|
+| **Best for** | Personal use — learning, home lab, side projects | Work use — company dev, testing |
 | **Systems** | Up to 16 | Up to 25 per user |
-| **Email** | Any email (personal OK) | Business email required |
-| **Self-Support** | Knowledge base, forums, Ask Red Hat AI | Knowledge base, forums, Ask Red Hat AI |
-| **Developer Support Add-on** | Not available | Available (optional, dev/test only) |
+| **Email** | Any (personal OK) | Business email required |
 | **Production** | ✅ Allowed (personal/small-scale) | ❌ Dev/test ONLY |
-| **What's Included** | RHEL + Red Hat portfolio | RHEL only (no Satellite) |
-| **Architectures** | x86_64 and ARM focused | All RHEL architectures |
-| **Use Case** | Personal dev, learning, small prod | Business dev/testing |
+
+Both are free. Choose based on who you're working for, not features. Full comparison: [references/QUICKREF.md](references/QUICKREF.md).
 
 ### Red Hat Developer for Individuals (free)
 
