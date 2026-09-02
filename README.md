@@ -260,6 +260,23 @@ sudo dnf clean all
 
 See [SKILL.md](rhel-developer-subscription/SKILL.md) for complete troubleshooting guide.
 
+## Now what?
+
+Subscription active, repos enabled — here's how to actually start using RHEL:
+
+**Install a dev toolchain:**
+```bash
+sudo dnf groupinstall "Development Tools" -y
+```
+
+**Connect to Red Hat Insights** (if you didn't use `rhc connect`, which does this automatically):
+```bash
+# subscription-manager users
+sudo insights-client --register
+```
+
+**Start a project:** clone your code, `sudo dnf install` whatever runtime/toolchain you need, and browse [developers.redhat.com](https://developers.redhat.com) for language- and framework-specific guides, or [access.redhat.com/documentation](https://access.redhat.com/documentation) for RHEL administration docs.
+
 ## Contributing
 
 Contributions welcome:
