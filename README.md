@@ -4,34 +4,32 @@
 
 This skill teaches AI assistants how to walk you through Red Hat developer subscription registration - from account creation to `dnf install`. Works for individual developers, whether for personal projects or company work.
 
-## What it does
+## Prerequisites
 
-Automates everything between "I need RHEL" and "dnf install works":
+**System requirements:**
+- RHEL 8.x, 9.x, or 10.x (VM, cloud, or bare metal)
+- Root/sudo access
+- Network connectivity to Red Hat services
 
-- **Red Hat Developer for Individuals** (free, 16 systems, for personal use)
-- **RHEL for Business Developers** (free, 25 systems, for work)
+**Before you start, three questions:**
+- **Do you have a Red Hat account?** If not, you'll create one as part of this process — it's free.
+- **Do you have RHEL installed already?** If not, this skill also walks you through downloading and installing it first, then registering.
+- **Do you need AI tooling?** No — the scripts below work standalone. AI assistance is a convenience, not a requirement.
 
-One prompt. Five minutes. Your AI assistant handles:
-1. Checking your RHEL version
-2. Figuring out which subscription you need
-3. Walking you through account setup
-4. Running `subscription-manager register`
-5. Enabling the right repos
-6. Confirming everything works
+**Terminology used throughout:** "Individual" = Red Hat Developer for Individuals. "Business Developers" = RHEL for Business Developers. Both are free.
+
+## ⚠️ Before you register: email verification is required
+
+Both subscription types require verifying your email address before they activate — this takes **5-10 minutes and cannot be skipped**. It's the #1 reason registration appears broken ("No subscriptions available" is almost always this). See the [Email Verification Guide](rhel-developer-subscription/references/EMAIL-VERIFICATION.md) for the full walkthrough and troubleshooting.
+
+## Choose your path
+
+- **End user** — just want to register a system? Jump to [Quick start](#quick-start) below.
+- **Agent developer** — integrating this skill into an AI assistant? See [SKILL.md](rhel-developer-subscription/SKILL.md) for the full specification, including why its `allowed-tools` frontmatter only permits read-only commands.
 
 ## Quick start
 
-### Talk to your AI assistant
-
-```
-"I need a developer subscription for RHEL"
-"Register this system with Red Hat Developer"
-"Set up RHEL for business development"
-```
-
-That's it. The AI loads this skill and walks you through the rest.
-
-### Skip the AI, run the scripts
+### Run it yourself (no AI required)
 
 ```bash
 cd rhel-developer-subscription/scripts
@@ -45,6 +43,16 @@ sudo ./register-business.sh --org 1234567 --key my-activation-key
 # Check it worked
 sudo ./verify-subscription.sh
 ```
+
+### Or talk to your AI assistant
+
+```
+"I need a developer subscription for RHEL"
+"Register this system with Red Hat Developer"
+"Set up RHEL for business development"
+```
+
+That's it. The AI loads this skill and walks you through the rest.
 
 ### Need team-wide deployment?
 
@@ -60,15 +68,15 @@ For centralized/managed team deployment instead, contact Red Hat Sales about:
 
 ## Features
 
-✅ **Automated Registration** - Complete workflow from account to active subscription  
-✅ **Dual Subscription Types** - Individual (free) and Business Developers (free)  
-✅ **Version Detection** - Automatic RHEL 8/9/10 support with correct repositories  
-✅ **Error Handling** - Graceful failures with actionable guidance  
-✅ **Verification** - Built-in health checks for subscription status  
-✅ **Modern Tools** - Supports both rhc and subscription-manager  
-✅ **bootc Integration** - Example Containerfile for image mode RHEL  
-✅ **Comprehensive Testing** - Full test suite with 10+ scenarios  
-✅ **Security-First** - Best practices for credential handling  
+✅ **Automated Registration** - Complete workflow from account to active subscription
+✅ **Dual Subscription Types** - Individual (free) and Business Developers (free)
+✅ **Version Detection** - Automatic RHEL 8/9/10 support with correct repositories
+✅ **Error Handling** - Graceful failures with actionable guidance
+✅ **Verification** - Built-in health checks for subscription status
+✅ **Modern Tools** - Supports both rhc and subscription-manager
+✅ **bootc Integration** - Example Containerfile for image mode RHEL
+✅ **Comprehensive Testing** - Full test suite with 10+ scenarios
+✅ **Security-First** - Best practices for credential handling
 
 ## Repository Structure
 
@@ -99,17 +107,6 @@ rhel-developer-subscription/
 | [EMAIL-VERIFICATION.md](rhel-developer-subscription/references/EMAIL-VERIFICATION.md) | Email verification walkthrough — the #1 source of confusion | All users |
 | [TESTING.md](rhel-developer-subscription/references/TESTING.md) | Test cases and procedures | Testers, QA |
 | [QUICKREF.md](rhel-developer-subscription/references/QUICKREF.md) | Command reference card | System administrators |
-
-## Requirements
-
-- RHEL 8.x, 9.x, or 10.x (VM, cloud, or bare metal)
-- Root/sudo access
-- Network connectivity to Red Hat services
-- Red Hat account (free at https://developers.redhat.com/register)
-
-Optional:
-- Ansible 2.9+ (for automation)
-- Podman 4.0+ (for bootc examples)
 
 ## Installation
 
@@ -144,7 +141,7 @@ sudo ./register-individual.sh user@example.com
 9. Runs: `sudo subscription-manager attach --auto`
 10. Enables: `rhel-9-for-x86_64-baseos-rpms` + `appstream-rpms`
 11. Verifies: `dnf repolist` shows repositories
-12. Reports: "✅ RHEL Developer subscription active. Next steps: ..."
+12. Reports: "✅ RHEL Developer subscription active. Run `sudo dnf groupinstall 'Development Tools'` to get started, or see the Now what? section below."
 
 ### Example 2: Using rhc (Modern Approach)
 
@@ -219,17 +216,17 @@ sudo ./verify-subscription.sh
 
 ## Security Best Practices
 
-✅ **Never commit credentials** to version control  
-✅ **Use activation keys** for automation (business subscriptions)  
-✅ **Rotate keys regularly** (quarterly recommended)  
-✅ **Limit key scope** to specific repos/organizations  
-✅ **Use secrets management** (Vault, AWS Secrets Manager, etc.)  
-✅ **Audit usage** via Red Hat Customer Portal  
-✅ **No-log in Ansible** for password tasks  
+✅ **Never commit credentials** to version control
+✅ **Use activation keys** for automation (business subscriptions)
+✅ **Rotate keys regularly** (quarterly recommended)
+✅ **Limit key scope** to specific repos/organizations
+✅ **Use secrets management** (Vault, AWS Secrets Manager, etc.)
+✅ **Audit usage** via Red Hat Customer Portal
+✅ **No-log in Ansible** for password tasks
 
-❌ **Don't** store passwords in scripts  
-❌ **Don't** use personal credentials for shared systems  
-❌ **Don't** skip subscription verification  
+❌ **Don't** store passwords in scripts
+❌ **Don't** use personal credentials for shared systems
+❌ **Don't** skip subscription verification
 
 ## Troubleshooting
 
